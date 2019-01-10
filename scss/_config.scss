@@ -1,5 +1,6 @@
-$primary-color: rgb(34, 29, 50);
-$secondary-color: #d89042;
+// $primary-color: rgb(31, 29, 50);
+$primary-color: rgb(29, 36, 50);
+$secondary-color: #e9a051;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
@@ -34,8 +35,9 @@ $background-opacity: 0.9;
   @if (lightness($color) > 40) {
     @return #222;
   } @else {
-    @return #ddd;
+    @return #f4f6f8;
   }
+
 }
 
 // Media Query Mixins
