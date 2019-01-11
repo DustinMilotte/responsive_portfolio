@@ -1,5 +1,8 @@
 .menu-btn {
   position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10%;
+  padding: .4rem;
   z-index: 3;
   right: 35px;
   top: 35px;
@@ -161,7 +164,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -170,7 +173,8 @@ main {
     border: #e9a051 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.3rem;
+    padding-right: 1rem; }
   .about-info .job {
     background: #263042;
     padding: 0.5rem;
@@ -197,9 +201,10 @@ main {
 .boxes {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 4rem; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
@@ -207,11 +212,14 @@ main {
     margin-bottom: 3rem;
     transition: all 0.3s ease-out; }
     .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #e9a051;
-      color: #222; }
-      .boxes div:hover span {
-        color: #222; }
+      border-color: #e9a051;
+      background: #263042; }
+
+.icons-contact a {
+  padding: 0.5rem; }
+  .icons-contact a:hover {
+    color: #e9a051;
+    transition: all 0.3s ease-out; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -221,7 +229,7 @@ main {
   transition: all 0.3s ease-out; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #e9a051;
-    color: #222; }
+    color: #1d2432; }
 
 .btn-dark {
   background: black;
@@ -273,7 +281,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
