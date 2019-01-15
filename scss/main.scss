@@ -34,7 +34,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: #d4d3cd;
   text-decoration: none;
 }
 
@@ -141,15 +141,28 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+  margin-right: 5rem;
 
   img {
     width: 100%;
-    border: 3px #fff solid;
+    border: 2px rgb(211, 205, 205) solid;
     &:hover {
       opacity: 0.6;
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+}
+
+.project-section-title {
+  margin: 1rem 2em 1rem 0;
+  h2 {
+    background: rgba(lighten($primary-color, 3), 0.5);
+    color: set-text-color($primary-color);
+    font-weight: 200;
+  }
+  hr {
+    margin-top: 0;
   }
 }
 
@@ -164,7 +177,7 @@ main {
 
   div {
     font-size: 2rem;
-    border: 3px #fff solid;
+    border: 3px #d4d3cd solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;
@@ -212,12 +225,12 @@ main {
 .btn-dark{
   @extend .btn;
   background: darken($primary-color, 50);
-  color:#fff;
+  color:#f4f6f8;
 }
 
 .btn-light{
   @extend .btn;
-  background: lighten($primary-color, 50);
+  background: lighten($primary-color, 40);
   color:#333;
 }
 
