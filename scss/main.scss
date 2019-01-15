@@ -140,13 +140,13 @@ main {
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem;
+  grid-gap: 1rem;
 
   img {
     width: 100%;
     border: 3px #fff solid;
     &:hover {
-      opacity: 0.5;
+      opacity: 0.6;
       border-color: $secondary-color;
       @include easeOut;
     }
