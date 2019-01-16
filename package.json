@@ -9,6 +9,7 @@
   "author": "Dustin Milotte",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "rellax": "^1.7.2"
   }
 }

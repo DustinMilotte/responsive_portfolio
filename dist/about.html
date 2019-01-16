@@ -99,6 +99,16 @@
     Copyright &copy; 2019
   </footer>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="rellax.js"></script>
+    <script>
+    	var rellax = new Rellax('.rellax', {
+        // center: true
+        callback: function(position) {
+            // callback every position change
+            console.log(position);
+        }
+      });
+    </script>
 </body>
 
 </html>
