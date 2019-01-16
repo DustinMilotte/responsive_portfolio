@@ -49,6 +49,39 @@ header {
   color: $secondary-color;
 }
 
+#nav-down {
+  @include easeOut();
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+  z-index: 5;
+  #nav-down-container{
+    width:100%;
+    text-align: center;
+    i {
+      color: rgba(darken($light-text-color,50), 0.4);
+      // width: 100%;
+      font-size: 4rem;
+      text-align: center;
+      cursor: pointer;
+      &:hover{
+        color: rgba(darken($light-text-color,40), 0.8);
+        @include easeOut();
+      }
+    }
+  }
+}
+
+#nav-down-btn{
+  @include easeOut();
+}
+
+.isUpBtn {
+  transition: all 0.3s ease-out;
+  transform: rotate(180deg);
+
+}
+
 main {
   background: rgba($primary-color, $background-opacity);
   padding: 4rem;
@@ -90,13 +123,37 @@ main {
 }
 
 #home-about {
+  height: 100vh;
+  width: 100vw;
   border: 1px solid white;
-  background: $primary-color;
+  background: $light-text-color;
+  color: $primary-color;
+  h2 {
+    text-align: center;
+    padding-top: 1rem;
+  }
 }
 
 #home-work {
+  height: 100vh;
+  width: 100vw;
   border: 1px solid white;
   background: $primary-color;
+  h2 {
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+#home-contact {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid white;
+  background: $light-text-color;
+  color: $primary-color;
+  h2 {
+    text-align: center;
+    padding-top: 1rem;
+  }
 }
 
 // about page

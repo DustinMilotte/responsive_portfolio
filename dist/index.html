@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+  <script src="js/moveTo.min.js"></script>
   <title>Dustin Milotte</title>
 </head>
 
@@ -39,6 +40,7 @@
       </ul>
     </nav>
   </header>
+
   <div class="background-image rellax" data-rellax-speed="-3"></div>
   <main id="home" class="rellax" data-rellax-speed="0">
       <h1 class="lg-heading">
@@ -55,13 +57,26 @@
         <a href="https://twitter.com/vea_arthur"><i class="fab fa-twitter fa-2x"></i></a>
       </div>
   </main>
+  <div id="nav-down">
+    <div id="nav-down-container">
+      <i id="nav-down-btn" class="fas fa-chevron-circle-down"></i>
+    </div>
+  </div>
+
   <section id="home-about" class="rellax" data-rellax-speed="0">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolorum quos accusamus minima recusandae modi consectetur corrupti itaque quibusdam illum! Inventore distinctio quia id nemo eum? Nemo deleniti voluptas nostrum placeat quis? Veniam ratione sapiente necessitatibus amet numquam quia facilis rerum, maiores debitis voluptatum exercitationem quidem laudantium, natus a laboriosam repellendus aut? Quaerat quidem voluptates dicta reiciendis iusto non. Ex enim voluptatibus, facilis ducimus neque voluptate vero, similique omnis excepturi inventore dolores adipisci ab ut quisquam cum doloremque dicta delectus eligendi tempora possimus aliquam quae reiciendis cupiditate ea. Consectetur repellendus beatae non! Illum perferendis hic atque aliquid ipsam sint explicabo!</p>
+    <h2>-- About --</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolorum quos accusamus minima recusandae modi consectetur corrupti itaque quibusdam illum! Inventore distinctio quia id nemo eum? Nemo deleniti voluptas nostrum placeat quis? Veniam ratione sapiente necessitatibus amet numquam quia facilis rerum, maiores debitis voluptatum exercitationem quidem laudantium, natus a laboriosam repellendus aut? Quaerat quidem voluptates dicta reiciendis iusto non. Ex enim voluptatibus, facilis ducimus neque voluptate vero, similique omnis excepturi inventore dolores adipisci ab ut quisquam cum doloremque dicta delectus eligendi tempora possimus aliquam quae reiciendis cupiditate ea. Consectetur repellendus beatae non! Illum perferendis hic atque aliquid ipsam sint explicabo <a href="about.html">(more)</a></p>
   </section>
+  
   <section id="home-work">
+    <h2>-- Work -- </h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sint expedita, maxime quibusdam quis, consequatur voluptates quidem ab tempora quam tenetur eos ullam cum quaerat magnam ad fugit repudiandae officiis qui adipisci sed libero labore excepturi? Ratione maxime quasi iusto temporibus perferendis culpa quis atque provident quaerat laudantium. Explicabo at quaerat, repellat cumque aliquid deleniti, totam similique inventore, autem facere iste doloribus veniam! Cum, animi veritatis magni ut tenetur suscipit corporis nemo voluptas atque reprehenderit aliquid dolores non tempora facilis repellat facere repellendus nisi ipsum quo provident, eveniet quisquam ratione. Excepturi placeat voluptas ipsum blanditiis. Veniam vel reprehenderit nisi doloremque?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, perspiciatis tenetur! Quaerat pariatur architecto beatae blanditiis a alias. Ipsa, facilis excepturi? Commodi eveniet exercitationem earum laboriosam libero natus dolor perspiciatis, quas iusto deserunt maiores accusantium amet error aspernatur impedit tenetur esse rem quod doloribus porro quam quo eius obcaecati. Vel distinctio ab vero quam quos exercitationem vitae, tenetur quas repellat cumque voluptatum, iure velit maiores. Debitis ullam impedit non similique, quia iusto commodi reprehenderit a.</p>
   </section>
+  <section id="home-contact" class="rellax" data-rellax-speed="0">
+      <h2>-- Contact --</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolorum quos accusamus minima recusandae modi consectetur corrupti itaque quibusdam illum! Inventore distinctio quia id nemo eum? Nemo deleniti voluptas nostrum placeat quis? Veniam ratione sapiente necessitatibus amet numquam quia facilis rerum, maiores debitis voluptatum exercitationem quidem laudantium, natus a laboriosam repellendus aut? Quaerat quidem voluptates dicta reiciendis iusto non. Ex enim voluptatibus, facilis ducimus neque voluptate vero, similique omnis excepturi inventore dolores adipisci ab ut quisquam cum doloremque dicta delectus eligendi tempora possimus aliquam quae reiciendis cupiditate ea. Consectetur repellendus beatae non! Illum perferendis hic atque aliquid ipsam sint explicabo <a href="about.html">(more)</a></p>
+    </section>
   <footer id="main-footer">
     Copyright &copy; 2019
   </footer>
@@ -72,7 +87,7 @@
         // center: true
         callback: function(position) {
             // callback every position change
-            console.log(position);
+            // console.log(position);
         }
       });
     </script>

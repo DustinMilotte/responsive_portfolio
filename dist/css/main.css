@@ -1,6 +1,6 @@
 .menu-btn {
   position: absolute;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(99, 99, 95, 0.4);
   border-radius: 10%;
   padding: .4rem;
   z-index: 3;
@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #d4d3cd;
+    background: #e1e1e0;
     transition: all 0.3s ease-out; }
     .menu-btn .btn-line:nth-child(3) {
       margin: 0; }
@@ -76,7 +76,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #d4d3cd;
+    color: #e1e1e0;
     text-decoration: none;
     transition: all 0.3s ease-out; }
     .menu .nav-link:hover {
@@ -99,7 +99,7 @@
 
 body {
   background: #1f1f24;
-  color: #d4d3cd;
+  color: #e1e1e0;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -133,6 +133,31 @@ header {
 .text-secondary {
   color: #76949d; }
 
+#nav-down {
+  transition: all 0.3s ease-out;
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+  z-index: 5; }
+  #nav-down #nav-down-container {
+    width: 100%;
+    text-align: center; }
+    #nav-down #nav-down-container i {
+      color: rgba(99, 99, 95, 0.4);
+      font-size: 4rem;
+      text-align: center;
+      cursor: pointer; }
+      #nav-down #nav-down-container i:hover {
+        color: rgba(125, 125, 120, 0.8);
+        transition: all 0.3s ease-out; }
+
+#nav-down-btn {
+  transition: all 0.3s ease-out; }
+
+.isUpBtn {
+  transition: all 0.3s ease-out;
+  transform: rotate(180deg); }
+
 main {
   background: rgba(31, 31, 36, 0.9);
   padding: 4rem;
@@ -162,12 +187,33 @@ main {
   z-index: -2; }
 
 #home-about {
+  height: 100vh;
+  width: 100vw;
   border: 1px solid white;
-  background: #1f1f24; }
+  background: #e1e1e0;
+  color: #1f1f24; }
+  #home-about h2 {
+    text-align: center;
+    padding-top: 1rem; }
 
 #home-work {
+  height: 100vh;
+  width: 100vw;
   border: 1px solid white;
   background: #1f1f24; }
+  #home-work h2 {
+    text-align: center;
+    padding-top: 1rem; }
+
+#home-contact {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid white;
+  background: #e1e1e0;
+  color: #1f1f24; }
+  #home-contact h2 {
+    text-align: center;
+    padding-top: 1rem; }
 
 .bio {
   display: grid;
@@ -236,7 +282,7 @@ main {
   margin: 1rem 2em 1rem 0; }
   .project-section-title h2 {
     background: rgba(38, 38, 44, 0.5);
-    color: #d4d3cd;
+    color: #e1e1e0;
     font-weight: 200; }
   .project-section-title hr {
     margin-top: 0; }
@@ -286,7 +332,7 @@ main {
   text-align: center;
   padding: 1rem;
   background: #070709;
-  color: #d4d3cd;
+  color: #e1e1e0;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {

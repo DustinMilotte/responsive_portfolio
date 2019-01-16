@@ -2,6 +2,8 @@
 // $primary-color: rgb(29, 36, 50);
 $primary-color: #1f1f24;
 $secondary-color: #76949d;
+$light-text-color:#e1e1e0;
+$dark-text-color: rgb(29, 36, 50); 
 // $secondary-color: #73a789;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
@@ -36,9 +38,9 @@ $background-opacity: 0.9;
 // Set text color
 @function set-text-color($color){
   @if (lightness($color) > 40) {
-    @return rgb(29, 36, 50);
+    @return $dark-text-color;
   } @else {
-    @return #d4d3cd;
+    @return $light-text-color;
   }
 
 }
