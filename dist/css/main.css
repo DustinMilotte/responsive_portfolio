@@ -186,39 +186,48 @@ main {
   background-size: cover;
   z-index: -2; }
 
+.home-section-title {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+  text-shadow: 0 1px 2px rgba(31, 31, 36, 0.25); }
+
+#home-section-title-work {
+  text-shadow: 0 1px 2px rgba(118, 148, 157, 0.25); }
+
 #home-about {
   height: 100vh;
   width: 100vw;
   background: #e1e1e0;
   color: #1f1f24; }
-  #home-about .home-about-content {
+  #home-about #home-about-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 5rem 2rem; }
-  #home-about .home-about-text {
+    margin: 5rem 2rem;
+    overflow: hidden; }
+  #home-about #home-about-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50vw;
+    width: 40vw;
     margin: 1rem;
-    background: #b1c2c8;
+    background: #85a0a8;
     border-radius: 3%; }
-    #home-about .home-about-text p {
+    #home-about #home-about-text p {
       text-align: left;
       margin: 2rem; }
-      #home-about .home-about-text p a {
+      #home-about #home-about-text p a {
         color: blue; }
-        #home-about .home-about-text p a:hover {
+        #home-about #home-about-text p a:hover {
           text-decoration: underline; }
-  #home-about .home-about-img {
+  #home-about #home-about-img {
     margin-right: 2rem;
     border: 3px solid #1f1f24;
-    border-radius: 2%; }
-  #home-about h2 {
-    text-align: center;
-    padding-top: 1rem; }
+    border-radius: 2%;
+    height: 420px;
+    width: 329px; }
 
 #home-work {
   height: 100vh;
@@ -231,12 +240,25 @@ main {
 #home-contact {
   height: 100vh;
   width: 100vw;
-  border: 1px solid white;
   background: #e1e1e0;
   color: #1f1f24; }
-  #home-contact h2 {
-    text-align: center;
-    padding-top: 1rem; }
+  #home-contact .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem; }
+    #home-contact .boxes div {
+      font-size: 2rem;
+      border: 3px #d4d3cd solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      transition: all 0.3s ease-out;
+      background: #1f1f24; }
+      #home-contact .boxes div:hover {
+        border-color: #76949d;
+        background: #26262c; }
 
 .bio {
   display: grid;
@@ -322,7 +344,8 @@ main {
     border: 3px #d4d3cd solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    transition: all 0.3s ease-out; }
+    transition: all 0.3s ease-out;
+    background: #1f1f24; }
     .boxes div:hover {
       border-color: #76949d;
       background: #2b2b32; }
@@ -397,11 +420,14 @@ main {
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
-  .home-about-text {
-    width: 30vw;
-    color: red; }
-  .home-about-img {
-    visibility: hidden; } }
+  #home-about #home-about-content {
+    margin: 2rem 2rem; }
+  #home-about #home-about-text {
+    width: 65vw;
+    height: 30vh;
+    overflow: hidden; }
+  #home-about #home-about-img {
+    margin-right: 0; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {

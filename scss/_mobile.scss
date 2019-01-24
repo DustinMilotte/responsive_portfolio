@@ -64,13 +64,26 @@
   .projects{
     grid-template-columns: repeat(2, 1fr);
   }
-  .home-about-text{
-    width: 30vw;
-    color: red;
+  #home-about{
+    #home-about-content {
+      margin: 2rem 2rem;
+    }
+    #home-about-text{
+      width: 65vw;
+      height: 30vh;
+      overflow: hidden;
+      // margin-top: 75px;
+    }
+    #home-about-img {
+      // // visibility: hidden;
+      // height: 325px;
+      // width: 247px;
+      margin-right: 0;
+    }
   }
-  .home-about-img {
-    visibility: hidden;
-  }
+  
+  
+  
 }
 
 // Smartphones
