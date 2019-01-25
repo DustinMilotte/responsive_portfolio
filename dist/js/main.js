@@ -24,7 +24,6 @@ window.onscroll = checkPosition;
 
 function checkPosition(e){
   if(sections[sections.length - 1].getBoundingClientRect().top <= 40){
-    console.log('at bottom');
     navDownBtn.classList.add('isUpBtn');
   } else {
     navDownBtn.classList.remove('isUpBtn');
@@ -39,7 +38,6 @@ function toggleMenu(){
 }
 
 function scrollPage() {
-  console.log('clicked');
   if(navDownBtn.classList.contains('isUpBtn')){
     moveTo.move(document.getElementById('home'));
     return;
@@ -60,8 +58,9 @@ function scrollPage() {
 
 new Glider(document.querySelector('.glider'), {
   slidesToShow: 3,
+  itemWidth: 200,
   dots: '#dots',
-  draggable: true,
+  draggable: false,
   arrows: {
     prev: '.glider-prev',
     next: '.glider-next'
