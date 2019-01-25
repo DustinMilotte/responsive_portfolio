@@ -172,7 +172,7 @@ main {
       }
       
     }
-    background: lighten($secondary-color, 5);
+    background: lighten($secondary-color, 25);
     border-radius: 3%;
   }
   #home-about-img {
@@ -192,6 +192,29 @@ main {
   h2 {
     text-align: center;
     padding-top: 1rem;
+  }
+  // figure {
+  //   // background: lighten($secondary-color, 25);
+  //   // max-height: 400px;
+  // }
+  i {
+    color: $secondary-color;
+    width: 100px;
+    height: 100px;
+  }
+  .my-glider {
+    margin: 3rem;
+  }
+  .glider-prev {
+    right: 50px;
+  }
+  .home-project-container {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid $secondary-color;
+    // color: $primary-color;
+    background: darken($primary-color, 5);
+    
   }
 }
 #home-contact {

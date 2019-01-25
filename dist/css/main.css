@@ -213,7 +213,7 @@ main {
     justify-content: center;
     width: 40vw;
     margin: 1rem;
-    background: #85a0a8;
+    background: #c0ced2;
     border-radius: 3%; }
     #home-about #home-about-text p {
       text-align: left;
@@ -236,6 +236,19 @@ main {
   #home-work h2 {
     text-align: center;
     padding-top: 1rem; }
+  #home-work i {
+    color: #76949d;
+    width: 100px;
+    height: 100px; }
+  #home-work .my-glider {
+    margin: 3rem; }
+  #home-work .glider-prev {
+    right: 50px; }
+  #home-work .home-project-container {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #76949d;
+    background: #131316; }
 
 #home-contact {
   height: 100vh;
