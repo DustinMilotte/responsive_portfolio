@@ -1,0 +1,63 @@
+
+.playlist{
+  list-style: none;
+  width: 70vw;
+  height: 70vh;
+  overflow: auto;
+  margin-top: 20px;
+  border: 1px solid #333;
+  border-radius:5px;
+  padding: 0;
+  a {
+    color: $primary-color;
+  }
+}
+.playlist li{
+  padding: 5px 10px;
+}
+.playlist li:nth-child(odd){
+  background-color:#eee;
+}
+.playlist li:nth-child(even){
+  background-color:#ddd;
+}
+
+.audio-timeline-container {
+  height:50px;
+  background: #eee;
+  vertical-align: middle; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.play-button{
+  padding: 1rem;
+  float:left;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: $primary-color;
+}
+/* .play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;} */
+/* .pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;} */
+.timeline{
+	width: 350px;
+	height: 20px;
+  margin-top: 0px;
+  margin-right:20px;
+	float: left;
+	border-radius: 15px;
+  background: rgba(0,0,0,.3);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.playhead{
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: rgba(0, 0, 0,1);
+}
