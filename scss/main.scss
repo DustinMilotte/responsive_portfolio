@@ -428,6 +428,10 @@ main {
 @import 'music';
 @import 'mobile';
 
+::-webkit-scrollbar {
+  width: 0px; 
+  background: transparent; 
+  }
 
 
 

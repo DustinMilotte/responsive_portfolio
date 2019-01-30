@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var music = document.getElementById('music');
   var songs = document.getElementsByClassName('song');
   var songsArray = Array.prototype.slice.call(songs);
-  var playButton = document.getElementById('play-button');
+  var playButton = document.getElementById('audio-play-button');
   var timeline = document.getElementById('timeline');
   var playhead = document. getElementById('playhead');
   var currentSongIndex = 0;

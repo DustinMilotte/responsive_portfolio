@@ -1,22 +1,36 @@
-.main-block {
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+// header {
+//   position: relative;
+//   background: rgba(0,0,0,0);
+//   padding-top: 1rem;
+//   padding-left: 3rem;
+//   h1 {
+//     padding-bottom: 1rem;
+//     font-size: 2rem;
+//   }
+//   span {
+//     font-size: 1.5rem;
+//   }
+// }
+.main-info-block {
   background: linear-gradient(lighten($primary-color, 10), $primary-color);
   // position: fixed;
   margin: 0;
   padding-top: 5rem;
-  padding-left: 3rem;
-  top: 0;
-  left: 0;
+  padding-left: 8rem;
+ 
   h1 {
-    padding-bottom: 2rem;
-    font-size: 3rem;
-  }
-  span {
+    padding-bottom: 1rem;
     font-size: 2rem;
   }
+  img {
+    margin-left: 5rem;
+  }
 }
-.project-wrapper {
-  margin: 3rem;
-}
+
 .album-cover {
   height: 300px;
   width: 300px;
@@ -27,9 +41,19 @@
   width: 500px;
   height: 200px;
 }
+
+.playlist-timeline-wrapper {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
 .playlist{
   list-style: none;
-  width: 100%;
+  width: 70%;
   height: 300px;;
   overflow: auto;
   margin-top: 20px;
@@ -41,7 +65,7 @@
   }
 }
 .playlist li{
-  padding: 5px 10px;
+  padding: 10px 10px;
   color: $light-text-color;
   border-bottom: 1px solid darken($light-text-color, 70);
 }
@@ -53,41 +77,51 @@
 // }
 
 .audio-timeline-container {
-  height:50px;
-  background: #eee;
+  height:120px;
+  width: 60%;
+  // background: #eee;
   vertical-align: middle; 
+  margin-top: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   border: 1px solid #333;
   border-radius: 5px;
+  background: lighten($primary-color, 4);
 }
-.play-button{
+.audio-control-buttons{
   padding: 1rem;
   float:left;
   font-size: 2rem;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
-  color: $primary-color;
+  
+  color: darken($light-text-color, 10);
+  i {
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+ 
 }
+
 /* .play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;} */
 /* .pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;} */
 .timeline {
-	width: 100%;
-	height: 20px;
-  margin-top: 0px;
+	width: 70%;
+	height: 4px;
+  margin-top: 10px;
   margin-right:20px;
 	float: left;
 	border-radius: 15px;
-  background: rgba(0,0,0,.3);
+  background: darken($light-text-color, 10);
   vertical-align: middle;
   cursor: pointer;
 }
 .playhead{
-	width: 18px;
-	height: 18px;
+	width: 15px;
+	height: 15px;
 	border-radius: 50%;
-	margin-top: 1px;
-	background: rgba(0, 0, 0,1);
+	margin-top: 0px;
+  background: darken($light-text-color, 10);
+  
 }
