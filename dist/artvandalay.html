@@ -58,38 +58,37 @@
         <section class="playlist-timeline-wrapper">
           
           <ul id="playlist-artvandalay" class="playlist">
-            <li><a class='song' href="./audio/artvandalay/01-thats-a-good-question-pt-1.m4a">1. That's a Good Question</a></li>
-            <li><a class='song' href="./audio/artvandalay/02-thats-a-good-question-pt-2.m4a">2. That's a Good Question pt.2</a></li>
-            <li><a class='song' href="./audio/artvandalay/03-psilocybe.m4a">3. Psilocybe</a></li>
-            <li><a class='song' href="./audio/artvandalay/04-delerium.m4a">4. Delerium</a></li>
-            <li><a class='song' href="./audio/artvandalay/05-shortstack.m4a">5. Shortstack</a></li>
-            <li><a class='song' href="./audio/artvandalay/06-carefree-tastetest.m4a">6. Carefree Tastetest</a></li>
-            <li><a class='song' href="./audio/artvandalay/07-tablas-and-toasters.m4a">7. Tablas and Toasters</a></li>
-            <li><a class='song' href="./audio/artvandalay/08-minus.m4a">8. Minus</a></li>
-            <li><a class='song' href="./audio/artvandalay/09-rinse-repeat.m4a">9. Rinse, Repeat</a></li>
-            <li><a class='song' href="./audio/artvandalay/10-backpacking-through-copelandia.m4a">10. Backpacking Through Copelandia</a></li>
-            <li><a class='song' href="./audio/artvandalay/11-point.m4a">11. Point</a></li>
-            <li><a class='song' href="./audio/artvandalay/12-adviso-interlude.m4a">12. Adviso</a></li>
-            <li><a class='song' href="./audio/artvandalay/13-he-knows-time.m4a">13. He Knows Time</a></li>
-            <li><a class='song' href="./audio/artvandalay/14-the-penultimate-recital.m4a">14. The Penultimate Recital</a></li>
-            <li><a class='song' href="./audio/artvandalay/15-a-brothers-gotta-work-it-out.m4a">15. A Brother's Gotta Work It Out</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/01-thats-a-good-question-pt-1.m4a">1. That's a Good Question</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/02-thats-a-good-question-pt-2.m4a">2. That's a Good Question pt.2</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/03-psilocybe.m4a">3. Psilocybe</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/04-delerium.m4a">4. Delerium</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/05-shortstack.m4a">5. Shortstack</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/06-carefree-tastetest.m4a">6. Carefree Tastetest</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/07-tablas-and-toasters.m4a">7. Tablas and Toasters</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/08-minus.m4a">8. Minus</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/09-rinse-repeat.m4a">9. Rinse, Repeat</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/10-backpacking-through-copelandia.m4a">10. Backpacking Through Copelandia</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/11-point.m4a">11. Point</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/12-adviso-interlude.m4a">12. Adviso</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/13-he-knows-time.m4a">13. He Knows Time</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/14-the-penultimate-recital.m4a">14. The Penultimate Recital</a></li>
+            <li class='song-item'><a class='song' href="./audio/artvandalay/15-a-brothers-gotta-work-it-out.m4a">15. A Brother's Gotta Work It Out</a></li>
           </ul>
         
           <div class="audio-timeline-container">
             <div class="audio-control-buttons">
-                <i class="fas fa-step-backward"></i>
+                <i id="audio-back-button" class="fas fa-step-backward"></i>
                 <i id="audio-play-button" class="play-button fas fa-play"></i>
-                <i class="fas fa-step-forward"></i>
+                <i id="audio-forward-button" class="fas fa-step-forward"></i>
             </div>
            
-            <div id="timeline" class="timeline">    
+            <div id="timeline" class="timeline">
+              <div id='progress-bar'></div>    
               <div id="playhead" class='playhead'></div>
             </div>
           </div>
         </section>
   </div>
-  
- <script src="js/main.js"></script>
 <script src="js/music.js"></script>
 </body>
 </html>

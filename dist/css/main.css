@@ -427,7 +427,7 @@ main {
   height: 200px; }
 
 .playlist-timeline-wrapper {
-  margin: 1rem;
+  margin: 0rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -437,22 +437,29 @@ main {
 .playlist {
   list-style: none;
   width: 70%;
-  height: 300px;
+  height: 28vh;
   overflow: auto;
   margin-top: 20px;
   border: 1px solid #333;
   border-radius: 5px;
   padding: 0; }
   .playlist a {
-    color: #e1e1e0; }
+    color: #e1e1e0;
+    padding-left: .5rem; }
 
 .playlist li {
   padding: 10px 10px;
   color: #e1e1e0;
   border-bottom: 1px solid #2f2f2d; }
+  .playlist li:hover {
+    background: #28282f;
+    cursor: pointer; }
+
+.current-song {
+  color: #55d9fa !important; }
 
 .audio-timeline-container {
-  height: 120px;
+  height: 100px;
   width: 60%;
   vertical-align: middle;
   margin-top: 1rem;
@@ -465,7 +472,6 @@ main {
 
 .audio-control-buttons {
   padding: 1rem;
-  float: left;
   font-size: 2rem;
   text-align: center;
   vertical-align: middle;
@@ -479,11 +485,10 @@ main {
 .timeline {
   width: 70%;
   height: 4px;
-  margin-top: 10px;
   margin-right: 20px;
   float: left;
   border-radius: 15px;
-  background: #c8c8c6;
+  background: #63635f;
   vertical-align: middle;
   cursor: pointer; }
 
@@ -492,7 +497,15 @@ main {
   height: 15px;
   border-radius: 50%;
   margin-top: 0px;
-  background: #c8c8c6; }
+  background: #c8c8c6;
+  position: relative;
+  bottom: 10px;
+  right: 1px; }
+
+#progress-bar {
+  background: #c8c8c6;
+  width: 0%;
+  height: 4px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
