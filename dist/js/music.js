@@ -14,6 +14,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var forwardButton = document.getElementById('audio-forward-button');
   var backButton = document.getElementById('audio-back-button');
   var albumEnded = false;
+
+  // menu vartiables
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  const menuNav = document.querySelector('.menu-nav');
+  const menuBranding = document.querySelector('.menu-branding');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  // set initial state of menu
+  let showMenu = false;
+  menuBtn.addEventListener('click', toggleMenu);
+
+  function toggleMenu(){
+    menuBtn.classList.toggle('close'); 
+    menu.classList.toggle('show'); 
+    menuNav.classList.toggle('show'); menuBranding.classList.toggle('show'); 
+    navItems.forEach(item => item.classList.toggle('show')); showMenu = !showMenu;
+  }
+
  
   // add click listener on the play button
   playButton.addEventListener('click', playButtonFunc);
@@ -89,7 +108,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
     music.currentTime = duration * clickPercent(event);
   }, false);
 
-  
+  // makes playhead draggable
+  playhead.addEventListener('mousedown', mouseDown, false);
+
+  window.addEventListener('mouseup', mouseUp, false);
+	
+	// mouseDown EventListener
+	function mouseDown() {
+			onplayhead = true;
+			window.addEventListener('mousemove', moveplayhead, true);
+			music.removeEventListener('timeupdate', timeUpdate, false);
+	}
+	// getting input from all mouse clicks
+	function mouseUp(event) {
+			if (onplayhead == true) {
+					moveplayhead(event);
+					window.removeEventListener('mousemove', moveplayhead, true);
+					// change current time
+					music.currentTime = duration * clickPercent(event);
+					music.addEventListener('timeupdate', timeUpdate, false);
+			}
+			onplayhead = false;
+	}
 
   function playButtonFunc(){
     if(music.paused){
@@ -179,9 +219,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  // window.setInterval(function(){console.log('currentSongIndex = ' + currentSongIndex)}, 1);
+  // update timeline on resize
   window.onresize = function(){
-    console.log('resize');
     timeUpdate();
   };
 });
