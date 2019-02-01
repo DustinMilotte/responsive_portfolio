@@ -12,8 +12,22 @@
   }
 }
 
+@include mediaShortDesktop {
+  .album-cover {
+    height: 300px;
+    width: 300px;
+  }
+  .playlist {
+    margin-top: 1rem;
+    li {
+      padding: 5px;
+    }
+  }
+}
+
 // Tablets and Small Laptops
 @include mediaMd {
+  // home page
   main {
     align-items: center;
     text-align: center;
@@ -82,17 +96,95 @@
     }
   }
   
+  // music project page
+  .main-info-block {
+    padding: 10rem 5rem 3rem 5rem;
+
+    display: flex;
+  }
+  .album-cover {
+    height: 250px;
+    width: 250px;
+  }
+  .playlist {
+    margin-top: 1rem;
+    li {
+      padding: 5px;
+    }
+    height: 50%;
+    margin-bottom: 5rem;
+  }
   
   
 }
 
 // Smartphones
 @include mediaSm {
+  
   main#home h1{
     margin-top: 10vh;
   }
  
   .projects{
     grid-template-columns: 1fr;
+  }
+
+  // music project page
+  .menu-btn {
+    top: 25px;
+    right: 25px;
+  }
+
+  .main-info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0 0 0;
+    h1 {
+    padding-bottom: .5rem;
+    font-size: 2rem;
+  }
+    img {
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .album-cover {
+    height: 200px;
+    width: 200px;
+  }
+
+  .album-info-wrapper {
+    height: 140px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-info {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .playlist {
+    height: 40%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .audio-timeline-container {
+    width: 90vw;
+    margin-top: 1rem;
+  }
+
+  .timeline {
+    margin: 0;
+    width: 90%;
+  }
+
+  .playlist-timeline-wrapper {
+    height: 263px;
   }
 }

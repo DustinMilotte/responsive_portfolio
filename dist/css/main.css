@@ -402,7 +402,7 @@ main {
   height: 60px; }
 
 .page-wrapper {
-  height: 80vh;
+  height: 100vh;
   width: 100vw; }
 
 .main-info-block {
@@ -417,31 +417,36 @@ main {
     margin-left: 5rem; }
 
 .album-cover {
-  height: 300px;
-  width: 300px; }
+  height: 400px;
+  width: 400px; }
 
 .album-info-wrapper {
   margin-left: 3rem;
+  margin-right: 0;
   display: inline-block;
-  width: 300px;
-  height: 200px; }
+  width: 250px;
+  height: 200px;
+  overflow: hidden; }
+  .album-info-wrapper p {
+    overflow: hidden; }
 
 .playlist-timeline-wrapper {
   margin: 0rem;
   width: 100%;
+  height: 50vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column; }
 
 .playlist {
   list-style: none;
   width: 70%;
-  height: 28vh;
+  height: 45%;
   overflow: auto;
-  margin-top: 20px;
+  margin-top: 3rem;
   border: 1px solid #333;
   border-radius: 5px;
+  margin-bottom: 2rem;
   padding: 0; }
   .playlist a {
     color: #e1e1e0;
@@ -515,7 +520,16 @@ main {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-height: 800px) {
+  .album-cover {
+    height: 300px;
+    width: 300px; }
+  .playlist {
+    margin-top: 1rem; }
+    .playlist li {
+      padding: 5px; } }
+
+@media screen and (max-width: 915px) {
   main {
     align-items: center;
     text-align: center; }
@@ -553,13 +567,63 @@ main {
     height: 30vh;
     overflow: hidden; }
   #home-about #home-about-img {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .main-info-block {
+    padding: 10rem 5rem 3rem 5rem;
+    display: flex; }
+  .album-cover {
+    height: 250px;
+    width: 250px; }
+  .playlist {
+    margin-top: 1rem;
+    height: 50%;
+    margin-bottom: 5rem; }
+    .playlist li {
+      padding: 5px; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .menu-btn {
+    top: 25px;
+    right: 25px; }
+  .main-info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0 0 0; }
+    .main-info-block h1 {
+      padding-bottom: .5rem;
+      font-size: 2rem; }
+    .main-info-block img {
+      margin: 0;
+      padding-bottom: 1rem; }
+  .album-cover {
+    height: 200px;
+    width: 200px; }
+  .album-info-wrapper {
+    height: 140px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .project-info {
+    text-align: center;
+    margin: 0; }
+  .playlist {
+    height: 40%;
+    padding: 0;
+    margin-bottom: 0; }
+  .audio-timeline-container {
+    width: 90vw;
+    margin-top: 1rem; }
+  .timeline {
+    margin: 0;
+    width: 90%; }
+  .playlist-timeline-wrapper {
+    height: 263px; } }
 
 ::-webkit-scrollbar {
   width: 0px;
