@@ -220,10 +220,16 @@ main {
     // color: $primary-color;
     background: darken($primary-color, 5);
     span{
+      font-size: 1.25rem;
       padding-bottom: 10px;
       display: inline-block;
     }
+    // img {
+    //   max-width: 500px;
+    //   max-height: 500px;
+    // }
   }
+
   .glider-dot.active {
     background: $secondary-color;
     // background: red;
