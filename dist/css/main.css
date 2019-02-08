@@ -4,8 +4,8 @@
   border-radius: 10%;
   padding: .4rem;
   z-index: 3;
-  right: 35px;
-  top: 35px;
+  right: 55px;
+  top: 55px;
   cursor: pointer;
   transition: all 0.3s ease-out; }
   .menu-btn .btn-line {
@@ -161,6 +161,7 @@ header {
 main {
   background: rgba(31, 31, 36, 0.9);
   padding: 4rem;
+  padding-left: 6rem;
   height: 100%;
   min-height: calc(100vh - 60px); }
   main .landing {
@@ -189,15 +190,20 @@ main {
 .home-section-title {
   font-size: 3rem;
   text-align: center;
-  padding-top: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
   text-shadow: 0 1px 2px rgba(31, 31, 36, 0.25); }
 
 #home-section-title-work {
-  text-shadow: 0 1px 2px rgba(118, 148, 157, 0.25); }
+  text-shadow: 0 1px 2px rgba(118, 148, 157, 0.25);
+  margin-bottom: 0; }
 
 #home-about {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: #e1e1e0;
   color: #1f1f24; }
   #home-about #home-about-content {
@@ -232,7 +238,10 @@ main {
 #home-work {
   height: 100vh;
   width: 100vw;
-  background: #1f1f24; }
+  background: #1f1f24;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   #home-work h2 {
     text-align: center;
     padding-top: 1rem; }
@@ -247,6 +256,9 @@ main {
   #home-work .glider-next {
     height: 100px;
     width: 100px; }
+  #home-work #dots-container {
+    align-self: flex-end;
+    height: 10vh; }
   #home-work .home-project-container {
     padding: 1rem;
     border: 1px solid #76949d;
@@ -261,13 +273,14 @@ main {
 #home-contact {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: #e1e1e0;
   color: #1f1f24; }
   #home-contact .boxes {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     margin-top: 4rem; }
     #home-contact .boxes div {
