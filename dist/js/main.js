@@ -64,5 +64,24 @@ new Glider(document.querySelector('.glider'), {
   arrows: {
     prev: '.glider-prev',
     next: '.glider-next'
-  }
+  },
+  // Glider.js breakpoints are mobile-first
+  responsive: [
+    // tablet
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+     // Desktop
+     {
+      breakpoint: 915,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+  ]
 });
