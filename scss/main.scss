@@ -262,130 +262,8 @@ main {
 
 }
 
-#home-contact {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background: $light-text-color;
-  color: $primary-color;
- 
-  .boxes{
-    display: flex;
-    // flex-wrap: wrap;
-    flex-direction: column;
-    // justify-content: space-evenly;
-    align-items: center;
-    margin: 4rem 1rem;
-  
-    div {
-      font-size: 2rem;
-      border: 3px #d4d3cd solid;
-      padding: 1.5rem 2.5rem;
-      margin-bottom: 3rem;
-      @include easeOut;
-      background: $primary-color;
-      
-      &:hover {
-        border-color: $secondary-color;
-        background: lighten($primary-color, 3);
-      }
-    }
-  }
-}
 
-// about page
-.bio {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
-  :nth-child(2){grid-column: 2 / 4;}
-  :nth-child(3){grid-column: 1 / 3;}
-  :nth-child(6){grid-column: 2 / 4;}
-  margin-right: 40px;
-  margin-bottom: 40px;
- 
-  .bio-img {
-    margin: auto;
-    // // border-radius: 50%;
-    border: $secondary-color 3px solid;
-    img {
-      display: block;
-    }  
-  }
-  
-  .bio-text {
-    font-size: 1.3rem;
-    padding-right: 1rem;
-  }
-}
 
-.bio-img-baby-shades {
-  height: 300px;
-  width: 400px;
-}
-.bio-img-blasticus {
-  height: 400px;
-  width: 265px;
-}
-
-.bio-img-camera{
-  height: 420px;
-  width: 329px;
-}
-
-.imdb-link:hover{
-  text-decoration: underline;
-}
-
-.job {
-  background: lighten($primary-color, 5);
-  padding: 0.5rem;
-  border-bottom: $secondary-color 5px solid;
-}
-
-.job-1 {
-  grid-area: job1;
-}
-.job-2 {
-  grid-area: job2;
-}
-.job-3 {
-  grid-area: job3;
-}
-
-// work/projects
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  margin-right: 5rem;
-
-  img {
-    width: 100%;
-    border: 2px rgb(211, 205, 205) solid;
-    &:hover {
-      opacity: 0.6;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
-  }
-}
-
-.project-section-title {
-  margin: 1rem 2em 1rem 0;
-  h2 {
-    background: rgba(lighten($primary-color, 3), 0.5);
-    color: set-text-color($primary-color);
-    font-weight: 200;
-  }
-  hr {
-    margin-top: 0;
-  }
-}
-
-// contact page
 #home-contact {
   .boxes{
     display: flex;
@@ -425,6 +303,146 @@ main {
     }
   }
 }
+#home-contact {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: $light-text-color;
+  color: $primary-color;
+ 
+  .boxes{
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    // justify-content: space-evenly;
+    align-items: center;
+    margin: 4rem 1rem;
+  
+    div {
+      font-size: 2rem;
+      border: 3px #d4d3cd solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      @include easeOut;
+      background: $primary-color;
+      
+      &:hover {
+        border-color: $secondary-color;
+        background: lighten($primary-color, 3);
+      }
+    }
+  }
+}
+
+// about page
+.top-gradient {
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  background:linear-gradient(lighten($primary-color, 10),$primary-color);
+  z-index: -1;
+}
+#about {
+  padding: 4rem;
+  h2 {
+    background: rgba(0, 0, 0, 0);
+  }
+  .bio {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    :nth-child(2){grid-column: 2 / 4;}
+    :nth-child(3){grid-column: 1 / 3;}
+    :nth-child(6){grid-column: 2 / 4;}
+    margin-right: 40px;
+    margin-bottom: 40px;
+    
+    .bio-img {
+      margin: auto;
+      // // border-radius: 50%;
+      border: $secondary-color 3px solid;
+      img {
+        display: block;
+      }  
+    }
+    
+    .bio-text {
+      font-size: 1.3rem;
+      padding-right: 1rem;
+      // background: lighten($primary-color,1)
+    }
+
+    .bio-img-baby-shades {
+      height: 300px;
+      width: 400px;
+    }
+    .bio-img-blasticus {
+      height: 400px;
+      width: 265px;
+    }
+    
+    .bio-img-camera{
+      height: 420px;
+      width: 329px;
+    }
+    
+    .imdb-link:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// work/projects
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin-right: 5rem;
+
+  img {
+    width: 100%;
+    border: 2px rgb(211, 205, 205) solid;
+    &:hover {
+      opacity: 0.6;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+.job {
+  background: lighten($primary-color, 5);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+}
+
+.job-1 {
+  grid-area: job1;
+}
+.job-2 {
+  grid-area: job2;
+}
+.job-3 {
+  grid-area: job3;
+}
+
+.project-section-title {
+  margin: 1rem 2em 1rem 0;
+  h2 {
+    background: rgba(lighten($primary-color, 3), 0.5);
+    color: set-text-color($primary-color);
+    font-weight: 200;
+  }
+  hr {
+    margin-top: 0;
+  }
+}
+
+// contact page
+
 
 // Button styles
 .btn {

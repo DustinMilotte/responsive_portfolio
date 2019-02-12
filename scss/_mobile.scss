@@ -7,7 +7,7 @@
 
 // Desktops & laptops
 @include mediaLg {
-  .projects{
+  .projects {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -34,21 +34,21 @@
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
-    } 
-    &#home{
-      h1{
+    }
+    &#home {
+      h1 {
         margin-top: 25vh;
       }
-    }   
+    }
   }
 
   // home about
-  #home-about{
+  #home-about {
     #home-about-content {
       margin: 2rem 2rem;
       flex-wrap: nowrap;
     }
-    #home-about-text{
+    #home-about-text {
       width: 65vw;
       height: 20vh;
       overflow: hidden;
@@ -65,8 +65,6 @@
     }
   }
 
- 
-
   // nav menu
   ul.menu-nav,
   div.menu-branding {
@@ -75,22 +73,22 @@
     min-height: 0;
 
     &.show {
-      transform: translate3d(0,0,0)
+      transform: translate3d(0, 0, 0);
     }
   }
 
   .menu-nav {
     height: 75vh;
-    transform: translate3d(-100%, 0,0);
+    transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
 
   .menu-branding {
     height: 25vh;
-    transform: translate3d(100%, 0,0);
-    
+    transform: translate3d(100%, 0, 0);
+
     .portrait {
-      background: url('../img/portrait_small.jpg');
+      background: url("../img/portrait_small.jpg");
       width: 150px;
       height: 150px;
     }
@@ -99,17 +97,14 @@
   // about page
   .about-info {
     grid-template-areas:
-    'bioimage'
-    'bio'
-    'job1'
-    'job2'
-    'job3';
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
     grid-template-columns: 1fr;
   }
-  
- 
- 
-  
+
   // music project page
   .main-info-block {
     padding: 10rem 5rem 3rem 5rem;
@@ -141,25 +136,61 @@
       width: 75px;
     }
   }
- 
-  
 
-  .projects{
+  // about page
+  #about {
+    h1 {
+      font-size: 4rem;
+    }
+    .bio {
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      :nth-child(2n + 2){
+        order:1;
+      }
+      .bio-img {
+       margin-top: 1rem;
+
+       .bio-img-baby-shades {
+        height: 240px;
+        width: 320px;
+        }
+        .bio-img-blasticus {
+        height: 320px;
+        width: 212px;
+        }
+      
+        .bio-img-camera{
+        height: 336px;
+        width: 263px;
+        }
+      }
+      .bio-text {
+        padding: 0;
+      }
+      
+     
+    }
+    
+  }
+
+  // work page
+  .projects {
     grid-template-columns: repeat(2, 1fr);
   }
-  
 }
 
 // Smartphones
 @include mediaSm {
   // home main
   main#home {
-    padding: 4rem;;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h1{
+    h1 {
       margin-top: 0;
       font-size: 5rem;
     }
@@ -170,7 +201,6 @@
 
   // home about
   #home-about {
-
     h2 {
       padding-top: 1rem;
     }
@@ -200,13 +230,22 @@
         font-size: 1.5rem;
       }
     }
-   
   }
-  
 
- 
- 
-  .projects{
+  // about page
+  #about {
+    padding: 2rem 1rem;
+    h1 {
+      font-size: 3.5rem;
+    }
+    .bio {
+      .bio-text {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .projects {
     grid-template-columns: 1fr;
   }
 
@@ -222,9 +261,9 @@
     align-items: center;
     padding: 4rem 0 0 0;
     h1 {
-    padding-bottom: .5rem;
-    font-size: 2rem;
-  }
+      padding-bottom: 0.5rem;
+      font-size: 2rem;
+    }
     img {
       margin: 0;
       padding-bottom: 1rem;
@@ -248,7 +287,7 @@
     text-align: center;
     margin: 0;
   }
-  
+
   .playlist {
     height: 40%;
     padding: 0;
