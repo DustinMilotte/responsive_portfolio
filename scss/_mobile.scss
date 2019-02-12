@@ -46,6 +46,7 @@
   #home-about{
     #home-about-content {
       margin: 2rem 2rem;
+      flex-wrap: nowrap;
     }
     #home-about-text{
       width: 65vw;
@@ -169,15 +170,37 @@
 
   // home about
   #home-about {
+
+    h2 {
+      padding-top: 1rem;
+    }
     #home-about-content {
+      flex-direction: column;
       #home-about-text {
         height: 40vh;
-        width: 100vw;
+        width: 80vw;
+        margin: 0;
+        p {
+          margin-top: 0;
+        }
       }
       #home-about-img-wrapper {
-        visibility: hidden;
+        // visibility: hidden;
+        margin-top: 1rem;
+        height: 300px;
+        width: 200px;
       }
     }
+  }
+
+  // home-contact
+  #home-contact {
+    .boxes {
+      div {
+        font-size: 1.5rem;
+      }
+    }
+   
   }
   
 

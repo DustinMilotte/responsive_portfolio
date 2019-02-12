@@ -67,7 +67,7 @@
   }
 
   &-nav {
-    background: rgba(darken($primary-color, 5), 0.9);
+    background: rgba(darken($primary-color, 5), 1);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -80,7 +80,7 @@
   }
 
   &-branding {
-    background: rgba(darken($primary-color, 5), 0.9);
+    background: rgba(darken($primary-color, 5), 1);
     @include easeOut;
     transform: translate3d(0, 100%,0);
 
