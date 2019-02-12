@@ -58,7 +58,7 @@ function scrollPage() {
 
 new Glider(document.querySelector('.glider'), {
   slidesToShow: 1,
-  itemWidth: 200,
+  // itemWidth: ,
   dots: '#dots',
   draggable: false,
   arrows: {
