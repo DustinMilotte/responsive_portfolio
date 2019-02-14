@@ -35,6 +35,7 @@
     top: 35px;
     right: 35px;
   }
+
   // home main
   main {
     align-items: center;
@@ -160,7 +161,6 @@
     margin-bottom: 5rem;
   }
 
- 
  // about page
  .about-info {
   grid-template-areas:
@@ -210,8 +210,37 @@
   }
 
   // work page
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
+  #my-work {
+    padding: 3rem;
+    h1 {
+      text-align: center;
+    }
+    .project-section-title {
+      margin-top: 1rem;
+    }
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // contact page
+  #contact-me {
+    padding: 2rem;
+    h1 {
+      font-size: 5rem;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+    .boxes {
+      margin-top: 6rem;
+      div {
+        margin-bottom: 4rem;
+      }
+      .icons-contact {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
@@ -374,10 +403,57 @@
     
   }
   
-
-  .projects {
-    grid-template-columns: 1fr;
+  // work page
+  #my-work {
+    padding: 2rem;
+    h1 {
+      padding-top: 1rem;
+      font-size: 3.5rem;
+    }
+    .project-section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-right: 0;
+      margin-bottom: 0;
+      hr {
+        margin-bottom: 0;
+      }
+    }
+    .projects {
+      grid-template-columns: 1fr;
+      .item {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
   }
+
+   // contact page
+   #contact-me {
+    padding: 2rem;
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 2.5rem;
+    }
+    .boxes {
+      margin-top: 2rem;
+      div {
+        display: flex;
+        margin-bottom: 2.75rem;
+        padding: .75rem;
+        a {
+          font-size: 1.25rem;
+        }
+      }
+      .icons-contact {
+        font-size: 1rem;
+      }
+    }
+  }
+  
 
   // music project page
   .menu-btn {

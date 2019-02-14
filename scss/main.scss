@@ -308,13 +308,6 @@ main {
 
 
 // about page
-.top-gradient {
-  width: 100vw;
-  height: 30vh;
-  position: absolute;
-  background:linear-gradient(lighten($primary-color, 10),$primary-color);
-  z-index: -1;
-}
 #about {
   padding: 4rem;
   h2 {
@@ -365,22 +358,130 @@ main {
   }
 }
 
-// work/projects
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  margin-right: 5rem;
-
-  img {
-    width: 100%;
-    border: 2px rgb(211, 205, 205) solid;
-    &:hover {
-      opacity: 0.6;
-      border-color: $secondary-color;
-      @include easeOut;
+// my work
+#my-work{
+  padding: 4rem;
+  .project-section-title {
+    margin: 2.5rem 2em 1rem 0;
+    h2 {
+      color: set-text-color($primary-color);
+      font-weight: 400;
+      font-size: 2rem;
+    }
+    hr {
+      margin-top: 0;
     }
   }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: 0rem 2rem;
+    
+    .item {
+      max-width: 500px;;
+      img {
+        width: 100%;
+        height: auto;
+        border: 2px $secondary-color solid;
+        &:hover {
+          // opacity: 0.6;
+          border-color: white;
+          @include easeOut;
+        }
+      }
+      a {
+        font-size: 1.2rem;
+      }
+    } 
+  }
+
+}
+
+// contact page
+#contact-me {
+  min-height: 100vh;
+  padding: 4rem 6rem;
+  .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem;
+  
+    div {
+      font-size: 2rem;
+      border: 3px solid $secondary-color;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      @include easeOut;
+      background: $primary-color;
+      
+      &:hover {
+        border-color: $light-text-color;
+        background: lighten($primary-color, 5);
+      }
+     
+    }
+    .icons-contact {
+      a {
+        padding: 0.5rem;
+    
+        &:hover {
+          color: $secondary-color;
+          @include easeOut();
+          
+        }
+      }
+    }
+  }
+}
+
+// top gradient
+.top-gradient {
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  background:linear-gradient(lighten($primary-color, 10),$primary-color);
+  z-index: -1;
+}
+
+// Button styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  @include easeOut;
+  &:hover {
+    // background: $secondary-color;
+    // color: set-text-color($secondary-color);
+    border-color: white;
+  }
+}
+
+.btn-dark{
+  @extend .btn;
+  background: darken($primary-color, 100);
+  color:$light-text-color;
+  border: 2px solid rgba(0, 0, 0, 0);
+
+}
+
+.btn-light{
+  @extend .btn;
+  background: lighten($primary-color, 60);
+  color: $dark-text-color;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
 }
 
 .job {
@@ -399,53 +500,6 @@ main {
   grid-area: job3;
 }
 
-.project-section-title {
-  margin: 1rem 2em 1rem 0;
-  h2 {
-    background: rgba(lighten($primary-color, 3), 0.5);
-    color: set-text-color($primary-color);
-    font-weight: 200;
-  }
-  hr {
-    margin-top: 0;
-  }
-}
-
-// contact page
-
-
-// Button styles
-.btn {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
-  @include easeOut;
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-  }
-}
-
-.btn-dark{
-  @extend .btn;
-  background: darken($primary-color, 50);
-  color:#f4f6f8;
-}
-
-.btn-light{
-  @extend .btn;
-  background: lighten($primary-color, 40);
-  color:#333;
-}
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
-  height: 60px;
-}
 @import 'music';
 
 @import 'video';

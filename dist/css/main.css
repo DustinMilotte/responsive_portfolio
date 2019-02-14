@@ -303,13 +303,6 @@ main {
       color: #76949d;
       transition: all 0.3s ease-out; }
 
-.top-gradient {
-  width: 100vw;
-  height: 30vh;
-  position: absolute;
-  background: linear-gradient(#37373f, #1f1f24);
-  z-index: -1; }
-
 #about {
   padding: 4rem; }
   #about h2 {
@@ -346,18 +339,91 @@ main {
     #about .bio .imdb-link:hover {
       text-decoration: underline; }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  margin-right: 5rem; }
-  .projects img {
-    width: 100%;
-    border: 2px #d3cdcd solid; }
-    .projects img:hover {
-      opacity: 0.6;
-      border-color: #76949d;
-      transition: all 0.3s ease-out; }
+#my-work {
+  padding: 4rem; }
+  #my-work .project-section-title {
+    margin: 2.5rem 2em 1rem 0; }
+    #my-work .project-section-title h2 {
+      color: #e1e1e0;
+      font-weight: 400;
+      font-size: 2rem; }
+    #my-work .project-section-title hr {
+      margin-top: 0; }
+  #my-work .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: 0rem 2rem; }
+    #my-work .projects .item {
+      max-width: 500px; }
+      #my-work .projects .item img {
+        width: 100%;
+        height: auto;
+        border: 2px #76949d solid; }
+        #my-work .projects .item img:hover {
+          border-color: white;
+          transition: all 0.3s ease-out; }
+      #my-work .projects .item a {
+        font-size: 1.2rem; }
+
+#contact-me {
+  min-height: 100vh;
+  padding: 4rem 6rem; }
+  #contact-me .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem; }
+    #contact-me .boxes div {
+      font-size: 2rem;
+      border: 3px solid #76949d;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      transition: all 0.3s ease-out;
+      background: #1f1f24; }
+      #contact-me .boxes div:hover {
+        border-color: #e1e1e0;
+        background: #2b2b32; }
+    #contact-me .boxes .icons-contact a {
+      padding: 0.5rem; }
+      #contact-me .boxes .icons-contact a:hover {
+        color: #76949d;
+        transition: all 0.3s ease-out; }
+
+.top-gradient {
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  background: linear-gradient(#37373f, #1f1f24);
+  z-index: -1; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease-out; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    border-color: white; }
+
+.btn-dark {
+  background: black;
+  color: #e1e1e0;
+  border: 2px solid rgba(0, 0, 0, 0); }
+
+.btn-light {
+  background: #b5b5c0;
+  color: #1d2432;
+  border: 2px solid rgba(0, 0, 0, 0); }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #070709;
+  color: #e1e1e0;
+  height: 60px; }
 
 .job {
   background: #2b2b32;
@@ -372,40 +438,6 @@ main {
 
 .job-3 {
   grid-area: job3; }
-
-.project-section-title {
-  margin: 1rem 2em 1rem 0; }
-  .project-section-title h2 {
-    background: rgba(38, 38, 44, 0.5);
-    color: #e1e1e0;
-    font-weight: 200; }
-  .project-section-title hr {
-    margin-top: 0; }
-
-.btn, .btn-dark, .btn-light {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
-  transition: all 0.3s ease-out; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #76949d;
-    color: #1d2432; }
-
-.btn-dark {
-  background: black;
-  color: #f4f6f8; }
-
-.btn-light {
-  background: #7f7f90;
-  color: #333; }
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #070709;
-  color: #e1e1e0;
-  height: 60px; }
 
 .page-wrapper {
   height: 100vh;
@@ -680,8 +712,27 @@ main {
         width: 263px; }
     #about .bio .bio-text {
       padding: 0; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  #my-work {
+    padding: 3rem; }
+    #my-work h1 {
+      text-align: center; }
+    #my-work .project-section-title {
+      margin-top: 1rem; }
+    #my-work .projects {
+      grid-template-columns: repeat(2, 1fr); }
+  #contact-me {
+    padding: 2rem; }
+    #contact-me h1 {
+      font-size: 5rem;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 2rem; }
+    #contact-me .boxes {
+      margin-top: 6rem; }
+      #contact-me .boxes div {
+        margin-bottom: 4rem; }
+      #contact-me .boxes .icons-contact {
+        font-size: 2rem; } }
 
 @media screen and (max-width: 500px) {
   main#home {
@@ -779,8 +830,39 @@ main {
     justify-content: flex-start; }
     .menu-nav .nav-link {
       padding: .7rem; }
-  .projects {
-    grid-template-columns: 1fr; }
+  #my-work {
+    padding: 2rem; }
+    #my-work h1 {
+      padding-top: 1rem;
+      font-size: 3.5rem; }
+    #my-work .project-section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-right: 0;
+      margin-bottom: 0; }
+      #my-work .project-section-title hr {
+        margin-bottom: 0; }
+    #my-work .projects {
+      grid-template-columns: 1fr; }
+      #my-work .projects .item a {
+        font-size: 1rem; }
+  #contact-me {
+    padding: 2rem; }
+    #contact-me h1 {
+      font-size: 3rem;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 2.5rem; }
+    #contact-me .boxes {
+      margin-top: 2rem; }
+      #contact-me .boxes div {
+        display: flex;
+        margin-bottom: 2.75rem;
+        padding: .75rem; }
+        #contact-me .boxes div a {
+          font-size: 1.25rem; }
+      #contact-me .boxes .icons-contact {
+        font-size: 1rem; }
   .menu-btn {
     top: 25px;
     right: 25px; }
