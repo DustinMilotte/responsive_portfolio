@@ -159,7 +159,7 @@ header {
   transform: rotate(180deg); }
 
 main {
-  background: rgba(31, 31, 36, 0.9);
+  background: rgba(31, 31, 36, 0.85);
   padding: 4rem;
   padding-left: 6rem;
   height: 100%;
@@ -183,7 +183,7 @@ main {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background: url(../img/background.jpg);
+  background: url(../img/portfolio-home-main-scaled.jpg);
   background-size: cover;
   z-index: -2; }
 
@@ -202,6 +202,7 @@ main {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   background: #e1e1e0;
@@ -209,16 +210,17 @@ main {
   #home-about #home-about-content {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 5rem 2rem;
-    overflow: hidden; }
+    margin: 2rem;
+    max-width: 90vw; }
     #home-about #home-about-content #home-about-text {
-      width: 40%;
-      height: 50%;
-      max-height: 50%;
+      width: 40vw;
+      height: auto;
       margin: 1rem;
-      margin-right: 3rem; }
+      margin-right: 3rem;
+      min-width: 400px; }
       #home-about #home-about-content #home-about-text p {
         text-align: left;
         margin: 2rem;
@@ -231,8 +233,9 @@ main {
           #home-about #home-about-content #home-about-text p a:hover {
             text-decoration: underline; }
     #home-about #home-about-content #home-about-img-wrapper {
-      height: 420px;
-      width: 329px; }
+      width: 40vw;
+      min-width: 300px;
+      height: auto; }
       #home-about #home-about-content #home-about-img-wrapper img {
         width: 100%;
         height: auto; }
@@ -618,7 +621,8 @@ main {
     right: 35px; }
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding-left: 4rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
@@ -626,14 +630,19 @@ main {
       margin-top: 25vh; }
   #home-about #home-about-content {
     margin: 2rem 2rem;
-    flex-wrap: nowrap; }
-  #home-about #home-about-text {
-    width: 65vw;
-    height: 20vh;
-    overflow: hidden;
-    margin-bottom: 3rem; }
-  #home-about #home-about-img {
-    margin-right: 0; }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    #home-about #home-about-content #home-about-text {
+      width: 65vw;
+      height: auto;
+      margin-right: 1rem;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      min-width: 300px; }
+    #home-about #home-about-content #home-about-img-wrapper {
+      margin-right: 0;
+      padding-bottom: 1rem; }
   #home-about #about-section-title {
     margin-bottom: 0; }
   #home-work #home-section-title-work {
@@ -750,21 +759,23 @@ main {
     main#home .icons {
       font-size: 1.1rem; }
   #home-about {
-    justify-content: flex-start; }
+    justify-content: center;
+    align-items: center; }
     #home-about h2 {
-      padding-top: 1rem; }
+      padding-top: 1rem;
+      padding-bottom: 0.5rem; }
     #home-about #home-about-content {
       flex-direction: column;
       justify-content: flex-start;
       margin: 0; }
       #home-about #home-about-content #home-about-text {
-        height: 45vh;
-        width: 80vw;
+        height: 42vh;
+        width: 70vw;
         margin: 0;
         margin-top: 1rem; }
         #home-about #home-about-content #home-about-text p {
           margin: 0;
-          padding: .5;
+          padding: 1rem;
           padding-bottom: 0;
           font-size: 1rem;
           overflow: scroll; }
@@ -772,7 +783,8 @@ main {
         margin-top: 1rem;
         height: 210px;
         width: 164px;
-        padding-bottom: 3rem; }
+        padding-bottom: 3rem;
+        min-width: 280px; }
   #home-work #home-section-title-work {
     margin: 0;
     padding: 0 1rem 3rem 1rem; }

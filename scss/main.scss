@@ -141,26 +141,28 @@ main {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  
   background: $light-text-color;
   color: $primary-color;
- 
 
   #home-about-content {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 5rem 2rem;
-    overflow: hidden;
+    margin: 2rem;
+    // overflow: hidden;
+    max-width: 90vw;
     #home-about-text{
-      width: 40%;
-      height: 50%;
-      max-height: 50%;
+      width: 40vw;
+      height: auto;
+      // max-height: 70vh;
       margin: 1rem;
       margin-right: 3rem;
+      min-width: 400px;
       // margin-top: 2rem;
       p {
         // vertical-align: middle;
@@ -185,8 +187,9 @@ main {
       // flex: auto;
       // border: 3px solid $primary-color;
       // border-radius: 2%;
-      height: 420px;
-      width: 329px;
+      width: 40vw;
+      min-width: 300px;
+      height: auto;
       img {
         width: 100%;
         // // max-width: 329px;
