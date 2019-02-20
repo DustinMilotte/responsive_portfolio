@@ -30,7 +30,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background:rgba(lighten($primary-color, 2), 0.5);
   }
 }
 
@@ -112,6 +112,12 @@ main {
     h1 {
       margin-top: 20vh;
     }
+    h2 {
+    }
+  }
+  #home-main-sm-heading {
+    // background: red;
+    // width: 50vw;
   }
 }
 
@@ -504,7 +510,7 @@ main {
 }
 
 @import 'music';
-
+@import 'vr-project';
 @import 'video';
 @import 'mobile';
 
@@ -512,16 +518,3 @@ main {
   width: 0px; 
   background: transparent; 
   }
-
-
-
-// .home-about-headline{
-    // background: $secondary-color;
-    // use this for full page banners
-    // border-bottom-left-radius: 200px;
-    // &::after{
-    //   position: relative;
-    //   height: 500px;
-    //   background: red;
-    // }
-  // }
