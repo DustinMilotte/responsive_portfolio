@@ -231,6 +231,35 @@
     }
   }
 
+  // vr-project page
+  .vr-project {
+    h1 {
+      text-align: center;
+      font-size: 4.5rem;
+    }
+    h2 {
+      text-align: center;
+    }
+    .project-info-container {
+      .project-info {
+        .project-info-block {
+          flex-direction: column;
+          .project-info-text-container {
+            margin-left: 0;
+            .project-info-text {
+              text-align: center;
+            }
+          }
+          &:nth-child(even){
+            .project-info-text-container {
+              order: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+
   // contact page
   #contact-me {
     padding: 2rem;
@@ -433,6 +462,43 @@
       .item {
         a {
           font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  // vr project page
+  .vr-project {
+    // background: red;
+    padding: 2.5rem .5rem 0rem .5rem;
+    h1 {
+      font-size: 2.5rem;
+      padding-top: 1rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+    .project-info-container {
+      .project-info {
+        .project-info-block {
+          justify-content: flex-start;
+          align-items: center;
+          padding-bottom: 1rem;
+          .project-info-img {
+            width:70vw;
+            margin: 1rem;
+            img {
+              min-width: 100%;
+              margin-bottom: 1rem;
+            }
+          }
+          .project-info-text-container {
+            .project-info-text {
+              font-size: 1.25rem;
+            }
+          }
         }
       }
     }

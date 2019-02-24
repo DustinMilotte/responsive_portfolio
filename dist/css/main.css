@@ -553,42 +553,46 @@ main {
   width: 0%;
   height: 4px; }
 
-#dream-keeper {
+.vr-project {
   padding: 4rem; }
-  #dream-keeper h2 {
+  .vr-project h2 {
     background: rgba(0, 0, 0, 0);
     text-decoration: underline;
     margin-left: 3rem; }
-  #dream-keeper .project-info-container {
+  .vr-project .project-info-container {
     display: flex;
-    margin: 5rem 10vw; }
-    #dream-keeper .project-info-container .project-info {
+    margin: 1rem; }
+    .vr-project .project-info-container .project-info {
       width: 100%;
-      display: grid;
+      display: flex;
       margin-left: 0;
-      grid-gap: 5rem;
-      grid-template-columns: repeat(3, 1fr); }
-      #dream-keeper .project-info-container .project-info :nth-child(2) {
-        grid-column: 2 / 4; }
-      #dream-keeper .project-info-container .project-info :nth-child(3) {
-        grid-column: 1 / 3; }
-      #dream-keeper .project-info-container .project-info :nth-child(6) {
-        grid-column: 2 / 4; }
-      #dream-keeper .project-info-container .project-info .project-info-img {
-        border: #76949d 3px solid; }
-        #dream-keeper .project-info-container .project-info .project-info-img img {
-          display: block;
-          max-width: 500px; }
-      #dream-keeper .project-info-container .project-info .project-info-text-container {
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .vr-project .project-info-container .project-info .project-info-block {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 100%; }
-        #dream-keeper .project-info-container .project-info .project-info-text-container .project-info-text {
-          font-size: 1.3rem;
-          padding-right: 1rem;
-          max-height: 100%;
-          overflow: hidden; }
+        width: 100%;
+        padding-bottom: 3rem; }
+        .vr-project .project-info-container .project-info .project-info-block .project-info-img {
+          margin: 3rem;
+          flex-basis: 40%; }
+          .vr-project .project-info-container .project-info .project-info-block .project-info-img img {
+            display: block;
+            max-width: 100%;
+            min-width: 400px;
+            border: #76949d 3px solid; }
+        .vr-project .project-info-container .project-info .project-info-block .project-info-text-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-basis: 40%;
+          margin-left: 2rem; }
+          .vr-project .project-info-container .project-info .project-info-block .project-info-text-container .project-info-text {
+            font-size: 1.3rem;
+            max-width: 700px;
+            min-width: 300px;
+            height: auto;
+            overflow: scroll; }
 
 #video-production {
   padding: 4rem; }
@@ -766,6 +770,19 @@ main {
       margin-top: 1rem; }
     #my-work .projects {
       grid-template-columns: repeat(2, 1fr); }
+  .vr-project h1 {
+    text-align: center;
+    font-size: 4.5rem; }
+  .vr-project h2 {
+    text-align: center; }
+  .vr-project .project-info-container .project-info .project-info-block {
+    flex-direction: column; }
+    .vr-project .project-info-container .project-info .project-info-block .project-info-text-container {
+      margin-left: 0; }
+      .vr-project .project-info-container .project-info .project-info-block .project-info-text-container .project-info-text {
+        text-align: center; }
+    .vr-project .project-info-container .project-info .project-info-block:nth-child(even) .project-info-text-container {
+      order: 2; }
   #contact-me {
     padding: 2rem; }
     #contact-me h1 {
@@ -895,6 +912,27 @@ main {
       grid-template-columns: 1fr; }
       #my-work .projects .item a {
         font-size: 1rem; }
+  .vr-project {
+    padding: 2.5rem .5rem 0rem .5rem; }
+    .vr-project h1 {
+      font-size: 2.5rem;
+      padding-top: 1rem; }
+    .vr-project h2 {
+      font-size: 1.35rem;
+      margin: 0;
+      padding-bottom: 1rem; }
+    .vr-project .project-info-container .project-info .project-info-block {
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 1rem; }
+      .vr-project .project-info-container .project-info .project-info-block .project-info-img {
+        width: 70vw;
+        margin: 1rem; }
+        .vr-project .project-info-container .project-info .project-info-block .project-info-img img {
+          min-width: 100%;
+          margin-bottom: 1rem; }
+      .vr-project .project-info-container .project-info .project-info-block .project-info-text-container .project-info-text {
+        font-size: 1.25rem; }
   #contact-me {
     padding: 2rem; }
     #contact-me h1 {
