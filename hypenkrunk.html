@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Dustin Milotte - artvandalay</title>
+</head>
+<body>
+  <audio id=music src="" >
+    <p>Your browser does not support HTML5</p>
+  </audio>
+  <div class="page-wrapper">
+      <header>
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+          </div>
+      
+          <nav class="menu">
+            <div class="menu-branding">
+              <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+              <li class="nav-item current">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a href="work.html" class="nav-link">Work</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+    <!-- <header>
+      <h1>Dustin Milotte <span>-- Work</span></h1>
+    </header> -->
+      
+      <section class="main-info-block">
+        <img src="./img/projects/hypenkrunk-cover.jpg" alt="" class="album-cover">
+        <div class="album-info-wrapper">
+            <h1 class="band-title">Hypenkr&uumlnk</h1>
+            <h3 class="album-title">Just Da Tip</h3>
+            <p class="project-info">Rap / Hip-Hip<br>
+              Dustin Milotte: Guitar and Synth
+            </p>
+        </div>
+      </section>
+        <section class="playlist-timeline-wrapper">
+          
+          <ul id="playlist-hypenkrunk" class="playlist">
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/01-post-op-cop.mp3">1. Post-Op Cop </a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/02-clitmatist.mp3">2. Clitmatist</a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/03-trappalachia.mp3">3. Trappalachia</a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/04-devils-geometry.mp3">4. Devil's Geometry</a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/05-doris-day.mp3">5. Doris Day</a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/06-armaghetto.mp3">6. Armaghetto</a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/07-biscuits-n-davey.mp3">7. Biscuits n Davey</a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/08-see-through-system.mp3">8. See Through System</a></li>
+            <li class='song-item'><a class='song' href="./audio/hypenkrunk/09-mossy-oak.mp3">9. Mossy Oak</a></li>
+          </ul>
+        
+          <div class="audio-timeline-container">
+            <div class="audio-control-buttons">
+                <i id="audio-back-button" class="fas fa-step-backward"></i>
+                <i id="audio-play-button" class="play-button fas fa-play"></i>
+                <i id="audio-forward-button" class="fas fa-step-forward"></i>
+            </div>
+           
+            <div id="timeline" class="timeline">
+              <div id='progress-bar'></div>    
+              <div id="playhead" class='playhead'></div>
+            </div>
+          </div>
+        </section>
+  </div>
+<script src="js/music.js"></script>
+</body>
+</html>
