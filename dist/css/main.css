@@ -825,12 +825,10 @@ main {
       font-weight: 100; }
     #home-about #home-about-content {
       flex-direction: column;
-      justify-content: flex-start;
       margin: 0;
       width: 100vw; }
       #home-about #home-about-content #home-about-text {
-        height: auto;
-        width: 90vw;
+        width: 80vw;
         margin: 0;
         margin-top: 1rem; }
         #home-about #home-about-content #home-about-text p {

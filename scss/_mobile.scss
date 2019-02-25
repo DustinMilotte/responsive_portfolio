@@ -320,12 +320,11 @@
     align-items: center;
     #home-about-content {
       flex-direction: column;
-      justify-content: flex-start;
       margin: 0;
       width: 100vw;
       #home-about-text {
-        height: auto;
-        width: 90vw;
+        // height: 50vh;
+        width: 80vw;
         margin: 0;
         margin-top: 1rem;
         p {
