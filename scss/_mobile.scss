@@ -64,8 +64,11 @@
         height: auto;
         margin-right: 1rem;
         overflow: hidden;
-        margin-bottom: 3rem;
+        margin-bottom: 10vh;
         min-width: 300px;
+        p {
+          margin: 0;
+        }
       }
       #home-about-img-wrapper {
         // // visibility: hidden;
@@ -285,18 +288,21 @@
 @include mediaSm {
   // home main
   main#home {
-    padding: 4rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-weight: 100;
     h1 {
       margin-top: 0;
       font-size: 4rem;
+      font-weight: 100;
     }
     h2 {
       padding: 0;
       font-size: 1.5rem;
+      font-weight: 100;
     }
     .icons {
       font-size: 1.1rem;
@@ -308,6 +314,7 @@
     h2 {
       padding-top: 1rem;
       padding-bottom: 0.5rem;
+      font-weight: 100;
     }
     justify-content: center;
     align-items: center;
@@ -315,6 +322,7 @@
       flex-direction: column;
       justify-content: flex-start;
       margin: 0;
+      width: 80vw;
       #home-about-text {
         height: 42vh;
         width: 70vw;
@@ -326,6 +334,7 @@
           padding-bottom: 0;
           font-size: 1rem;
           overflow: scroll;
+          width: 100%;
         }
       }
       #home-about-img-wrapper {
@@ -344,6 +353,7 @@
     #home-section-title-work {
       margin: 0;
       padding: 0 1rem 3rem 1rem;
+      font-weight: 100;
     }
    
     .glider {
