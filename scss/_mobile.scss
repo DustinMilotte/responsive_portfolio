@@ -322,17 +322,17 @@
       flex-direction: column;
       justify-content: flex-start;
       margin: 0;
-      width: 80vw;
+      width: 100vw;
       #home-about-text {
-        height: 42vh;
-        width: 70vw;
+        height: auto;
+        width: 90vw;
         margin: 0;
         margin-top: 1rem;
         p {
           margin:0;
           padding: 1rem;
           padding-bottom: 0;
-          font-size: 1rem;
+          font-size: .8rem;
           overflow: scroll;
           width: 100%;
         }
