@@ -159,7 +159,7 @@ header {
   transform: rotate(180deg); }
 
 main {
-  background: rgba(31, 31, 36, 0.85);
+  background: rgba(31, 31, 36, 0.86);
   padding: 4rem;
   padding-left: 6rem;
   height: 100%;
@@ -202,7 +202,6 @@ main {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   background: #e1e1e0;
@@ -679,8 +678,10 @@ main {
       height: auto;
       margin-right: 1rem;
       overflow: hidden;
-      margin-bottom: 3rem;
+      margin-bottom: 10vh;
       min-width: 300px; }
+      #home-about #home-about-content #home-about-text p {
+        margin: 0; }
     #home-about #home-about-content #home-about-img-wrapper {
       margin-right: 0;
       padding-bottom: 1rem; }
@@ -799,17 +800,20 @@ main {
 
 @media screen and (max-width: 500px) {
   main#home {
-    padding: 4rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    font-weight: 100; }
     main#home h1 {
       margin-top: 0;
-      font-size: 4rem; }
+      font-size: 4rem;
+      font-weight: 100; }
     main#home h2 {
       padding: 0;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      font-weight: 100; }
     main#home .icons {
       font-size: 1.1rem; }
   #home-about {
@@ -817,11 +821,13 @@ main {
     align-items: center; }
     #home-about h2 {
       padding-top: 1rem;
-      padding-bottom: 0.5rem; }
+      padding-bottom: 0.5rem;
+      font-weight: 100; }
     #home-about #home-about-content {
       flex-direction: column;
       justify-content: flex-start;
-      margin: 0; }
+      margin: 0;
+      width: 80vw; }
       #home-about #home-about-content #home-about-text {
         height: 42vh;
         width: 70vw;
@@ -832,7 +838,8 @@ main {
           padding: 1rem;
           padding-bottom: 0;
           font-size: 1rem;
-          overflow: scroll; }
+          overflow: scroll;
+          width: 100%; }
       #home-about #home-about-content #home-about-img-wrapper {
         margin-top: 1rem;
         height: 210px;
@@ -841,7 +848,8 @@ main {
         min-width: 280px; }
   #home-work #home-section-title-work {
     margin: 0;
-    padding: 0 1rem 3rem 1rem; }
+    padding: 0 1rem 3rem 1rem;
+    font-weight: 100; }
   #home-work .glider {
     margin: 0; }
   #home-work .glider-prev {
