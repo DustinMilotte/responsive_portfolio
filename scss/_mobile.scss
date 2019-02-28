@@ -186,13 +186,20 @@
   #about {
     h1 {
       font-size: 4rem;
+      text-align: center;
+    }
+    h2{
+      text-align: center;
     }
     .bio {
       margin: 1rem;
       display: flex;
       flex-direction: column;
-      :nth-child(2n + 2){
-        order:1;
+      :nth-child(-n+2){
+        order: -2;
+      }
+      :nth-child(4){
+        order: -1;
       }
       .bio-img {
        margin-top: 1rem;
@@ -311,16 +318,18 @@
 
   // home about
   #home-about {
+    justify-content: flex-start;
+    align-items: center;
     h2 {
-      padding-top: 1rem;
+      padding-top: 2rem;
       padding-bottom: 0.5rem;
       font-weight: 100;
     }
-    justify-content: center;
-    align-items: center;
+    
     #home-about-content {
       flex-direction: column;
-      margin: 0;
+      justify-content: flex-start;
+      margin: 0rem 0;
       width: 100vw;
       #home-about-text {
         // height: 50vh;
@@ -328,9 +337,9 @@
         margin: 0;
         margin-top: 1rem;
         p {
-          margin:0;
+          margin:1rem 0rem;
           padding: 1rem;
-          padding-bottom: 0;
+          padding-bottom: 0rem;
           font-size: .8rem;
           overflow: scroll;
           width: 100%;
@@ -467,6 +476,7 @@
       }
     }
     .projects {
+      margin: 1rem;
       grid-template-columns: 1fr;
       .item {
         a {
@@ -597,4 +607,116 @@
   .playlist-timeline-wrapper {
     height: 263px;
   }
+}
+
+// Landscape Smartphones
+@include mediaMobileLandscape {
+   // home main
+   main#home {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    h1 {
+      margin-top: 0;
+      font-size: 4rem;
+      font-weight: 100;
+    }
+    h2 {
+      padding: 0;
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
+    .icons {
+      font-size: 1.1rem;
+    }
+  }
+
+  // home about
+  #home-about {
+    justify-content: flex-start;
+    align-items: center;
+    h2 {
+      padding-top: 2rem;
+      padding-bottom: 0.5rem;
+      font-weight: 100;
+    }
+    
+    #home-about-content {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0rem 0;
+      width: 100vw;
+      #home-about-text {
+        // height: 50vh;
+        width: 40vw;
+        margin: 0;
+        margin-top: 1rem;
+        p {
+          margin:1rem 0rem;
+          padding: 1rem;
+          padding-bottom: 0rem;
+          font-size: .8rem;
+          overflow: scroll;
+          width: 100%;
+        }
+      }
+      #home-about-img-wrapper {
+        // visibility: hidden;
+        margin-top: 1rem;
+        height: 210px;
+        width: 164px;
+        padding-bottom: 3rem;
+        min-width: 280px;
+      }
+    }
+  }
+
+  // home work
+  #home-work {
+    #home-section-title-work {
+      // top: 0;
+      margin-top: 3rem;
+      margin-bottom: 0rem;
+      // padding: 0 1rem 3rem 1rem;
+      font-weight: 100;
+      padding: 0;
+    }
+   
+    .glider {
+      margin: 0;
+    }
+    .glider-prev {
+      margin-right:0;
+      width: 50px;
+      height: 50px;
+      i {
+        float: left;
+      }
+      visibility: hidden;
+    }
+    .glider-next {
+      width: 50px;
+      height: 50px;
+      i {
+        float: right
+      }
+      visibility: hidden;
+    }
+  }
+
+  // home-contact
+  #home-contact {
+    .boxes {
+      margin-top: 0;
+      div {
+        font-size: 1.25rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
 }

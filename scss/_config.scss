@@ -75,3 +75,9 @@ $background-opacity: 0.86;
     @content;
   }
 }
+
+@mixin mediaMobileLandscape {
+  @media screen and (max-width: 700px) and (orientation: landscape){
+    @content;
+  }
+}
