@@ -83,11 +83,20 @@ header {
 
 }
 
+#beyond-top {
+  background: red;
+  // height: 200px;
+  top: -100px;
+  position: relative;
+  // z-index: 100;
+}
+
 main {
   background: rgba($primary-color, $background-opacity);
   padding: 4rem;
-  padding-left: 6rem;
-  height: 100%;
+  padding-top: 25vh;
+  padding-left: 8rem;
+  // height: 100%;
   // for sticky footer: set min height equal to 100vh - footer size
   min-height: calc(100vh - 60px);
   .landing{
@@ -107,8 +116,12 @@ main {
   }
 
   &#home {
+    // padding-top: 20vh;
     overflow: hidden;
-    height: 100vh;
+    height: 120vh;
+    top: -20vh;
+    margin-bottom: -20vh;
+    position: relative;
     h1 {
       margin-top: 20vh;
     }
@@ -118,6 +131,9 @@ main {
   #home-main-sm-heading {
     // background: red;
     // width: 50vw;
+  }
+  .mobile-line-break{
+    display: none;
   }
 }
 
