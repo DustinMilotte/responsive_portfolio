@@ -671,6 +671,9 @@ main {
 @media screen and (max-width: 915px) {
   .top-gradient {
     height: 18vh; }
+  .background-image {
+    background: url(../img/portfolio-home-mobile.jpg);
+    background-size: cover; }
   .menu-btn {
     top: 35px;
     right: 35px; }
@@ -849,6 +852,7 @@ main {
     #home-about #home-about-content {
       flex-direction: column;
       justify-content: flex-start;
+      flex-wrap: nowrap;
       margin: 0rem 0;
       width: 100vw; }
       #home-about #home-about-content #home-about-text {
@@ -856,7 +860,7 @@ main {
         margin: 0;
         margin-top: 1rem; }
         #home-about #home-about-content #home-about-text p {
-          margin: 1rem 0rem;
+          margin: .5rem 0rem;
           padding: 1rem;
           padding-bottom: 0rem;
           font-size: .8rem;
