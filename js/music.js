@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var forwardButton = document.getElementById('audio-forward-button');
   var backButton = document.getElementById('audio-back-button');
   var albumEnded = false;
+  var onplayhead = false;
+  var currentPlayheadTouchEvent;
 
   // menu vartiables
   const menuBtn = document.querySelector('.menu-btn');
@@ -109,27 +111,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }, false);
 
   // makes playhead draggable
-  playhead.addEventListener('mousedown', mouseDown, false);
+  playhead.addEventListener('mousedown', playheadMouseDown, false);
+  playhead.addEventListener('touchstart', handleTimelineTouchStart, false);
+  playhead.addEventListener('touchend', handleTimelineTouchEnd, false);
+  playhead.addEventListener('touchmove', handleTimelineTouchMove, false);
 
   window.addEventListener('mouseup', mouseUp, false);
-	
-	// mouseDown EventListener
-	function mouseDown() {
-			onplayhead = true;
-			window.addEventListener('mousemove', moveplayhead, true);
-			music.removeEventListener('timeupdate', timeUpdate, false);
-	}
-	// getting input from all mouse clicks
-	function mouseUp(event) {
-			if (onplayhead == true) {
-					moveplayhead(event);
-					window.removeEventListener('mousemove', moveplayhead, true);
-					// change current time
-					music.currentTime = duration * clickPercent(event);
-					music.addEventListener('timeupdate', timeUpdate, false);
-			}
-			onplayhead = false;
-	}
 
   function playButtonFunc(){
     if(music.paused){
@@ -149,10 +136,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       currentSongIndex ++;
       music.pause();
       music.src = songsArray[currentSongIndex].href;
+      updateCurrentSong(songsArray, currentSongIndex);
       music.play();
     } else if (currentSongIndex !== songsArray.length - 1 && music.paused) {
       currentSongIndex ++;
       music.src = songsArray[currentSongIndex].href;
+      updateCurrentSong(songsArray, currentSongIndex);
     }
   }
   
@@ -161,14 +150,62 @@ document.addEventListener("DOMContentLoaded", function(event) {
       currentSongIndex --;
       music.pause();
       music.src = songsArray[currentSongIndex].href;
+      updateCurrentSong(songsArray, currentSongIndex);
       music.play();
     } else if (currentSongIndex !== 0 && music.paused) {
       currentSongIndex --;
       music.src = songsArray[currentSongIndex].href;
+      updateCurrentSong(songsArray, currentSongIndex);
     }
   }
-  
+	
+	// mouseDown EventListener
+	function playheadMouseDown() {
+			onplayhead = true;
+			window.addEventListener('mousemove', moveplayhead, true);
+      music.removeEventListener('timeupdate', timeUpdate, false);
+      console.log("on playhead");
+  }
 
+	// getting input from all mouse clicks
+	function mouseUp(event) {
+			if (onplayhead == true) {
+					moveplayhead(event);
+					window.removeEventListener('mousemove', moveplayhead, true);
+					// change current time
+					music.currentTime = duration * clickPercent(event);
+					music.addEventListener('timeupdate', timeUpdate, false);
+			}
+			onplayhead = false;
+  }
+
+  function handleTimelineTouchStart(e){
+    console.log('handleTimelineTouchStart');
+    console.log(e);
+    e.preventDefault();
+    onplayhead = true;
+    music.removeEventListener('timeupdate', timeUpdate, false);
+    console.log("on playhead");
+  }
+
+  function handleTimelineTouchMove(e){
+    // console.log('timlinetouchmove');
+    // console.log(e);
+    e.preventDefault();
+    currentPlayheadTouchEvent = e;
+    moveplayheadByTouch(e);
+  }
+
+  function handleTimelineTouchEnd(e){
+    console.log('timlinetouchend');
+    console.log(e);
+    e.preventDefault();
+    // change current time
+    music.currentTime = duration * touchPercent(currentPlayheadTouchEvent);
+    music.addEventListener('timeupdate', timeUpdate, false);
+  }
+  
+  
 	// Synchronizes playhead position with current point in audio
   function timeUpdate() {
     timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
@@ -196,9 +233,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
+  function moveplayheadByTouch(e) {
+    console.log('moveplayhead by touch');
+    var newMargLeft = e.touches[0].clientX - getPosition(timeline);
+    if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+        playhead.style.marginLeft = newMargLeft + "px";
+    }
+    if (newMargLeft < 0) {
+        playhead.style.marginLeft = "0px";
+    }
+    if (newMargLeft > timelineWidth) {
+        playhead.style.marginLeft = timelineWidth + "px";
+    }
+  }
+
   // returns click as decimal (.77) of the total timelineWidth
-	function clickPercent(event) {
-    return (event.clientX - getPosition(timeline)) / timelineWidth;
+	function clickPercent(e) {
+    return (e.clientX - getPosition(timeline)) / timelineWidth;
+  }
+
+   // returns click as decimal (.77) of the total timelineWidth
+	function touchPercent(e) {
+    return (e.touches[0].clientX - getPosition(timeline)) / timelineWidth;
   }
 
   // Returns elements left position relative to top-left of viewport
@@ -211,11 +267,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     songsArray.forEach(function (song, index) {
       song.className = "song";
     });
+    songItemsArray.forEach(function (song, index){
+      song.className = "song-item";
+    })
     if(albumEnded){
       albumEnded = false;
       // add current song class
     } else {
-      songsArray[currentSongIndex].className = "song current-song";
+      songsArray[currentSongIndex].className = "song current-song-text";
+      songItemsArray[currentSongIndex].className = "song-item current-song";
     }
   }
 

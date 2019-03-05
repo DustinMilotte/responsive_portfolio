@@ -455,115 +455,99 @@ main {
   grid-area: job3; }
 
 .page-wrapper {
-  height: 100vh;
-  width: 100vw; }
-
-.main-info-block {
-  background: linear-gradient(#37373f, #1f1f24);
-  margin: 0;
-  padding-top: 5rem;
-  padding-left: 8rem; }
-  .main-info-block h1 {
-    padding-bottom: 1rem;
-    font-size: 2rem; }
-  .main-info-block img {
-    margin-left: 5rem; }
-
-.album-cover {
-  height: 400px;
-  width: 400px; }
-
-.album-info-wrapper {
-  margin-left: 3rem;
-  margin-right: 0;
-  display: inline-block;
-  width: 250px;
-  height: 200px;
-  overflow: hidden; }
-  .album-info-wrapper p {
-    overflow: hidden; }
-
-.playlist-timeline-wrapper {
-  margin: 0rem;
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
-
-.playlist {
-  list-style: none;
-  width: 70%;
-  height: 45%;
-  overflow: auto;
-  margin-top: 3rem;
-  border: 1px solid #333;
-  border-radius: 5px;
-  margin-bottom: 2rem;
-  padding: 0; }
-  .playlist a {
-    color: #e1e1e0;
-    padding-left: .5rem; }
-
-.playlist li {
-  padding: 10px 10px;
-  color: #e1e1e0;
-  border-bottom: 1px solid #2f2f2d; }
-  .playlist li:hover {
-    background: #28282f;
-    cursor: pointer; }
-
-.current-song {
-  color: #55d9fa !important; }
-
-.audio-timeline-container {
-  height: 100px;
-  width: 60%;
-  vertical-align: middle;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background: #28282f; }
-
-.audio-control-buttons {
-  padding: 1rem;
-  font-size: 2rem;
-  text-align: center;
-  vertical-align: middle;
-  color: #c8c8c6; }
-  .audio-control-buttons i {
-    padding: 0 1rem;
-    cursor: pointer; }
-
-/* .play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;} */
-/* .pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;} */
-.timeline {
-  width: 70%;
-  height: 4px;
-  margin-right: 20px;
-  float: left;
-  border-radius: 15px;
-  background: #63635f;
-  vertical-align: middle;
-  cursor: pointer; }
-
-.playhead {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin-top: 0px;
-  background: #c8c8c6;
-  position: relative;
-  bottom: 10px;
-  right: 1px; }
-
-#progress-bar {
-  background: #c8c8c6;
-  width: 0%;
-  height: 4px; }
+  /* .play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;} */
+  /* .pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;} */ }
+  .page-wrapper .main-info-block {
+    background: linear-gradient(#37373f, #1f1f24);
+    margin: 0;
+    padding-top: 5rem;
+    padding-left: 8rem;
+    height: 50%; }
+    .page-wrapper .main-info-block img {
+      margin-left: 5rem; }
+    .page-wrapper .main-info-block .album-cover {
+      height: 400px;
+      width: 400px; }
+    .page-wrapper .main-info-block .album-info-wrapper {
+      margin-left: 3rem;
+      margin-right: 0;
+      display: inline-block;
+      width: 250px;
+      height: 200px; }
+      .page-wrapper .main-info-block .album-info-wrapper h1 {
+        padding-bottom: 1rem;
+        font-size: 2rem; }
+  .page-wrapper .playlist-timeline-wrapper {
+    margin: 0rem;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .page-wrapper .playlist-timeline-wrapper .playlist {
+      list-style: none;
+      width: 70%;
+      margin-top: 3rem;
+      border-top: 1px solid #494946;
+      margin-bottom: 150px;
+      padding: 0; }
+      .page-wrapper .playlist-timeline-wrapper .playlist .current-song {
+        background: #3b3b45; }
+      .page-wrapper .playlist-timeline-wrapper .playlist .current-song-text {
+        color: #55d9fa !important; }
+      .page-wrapper .playlist-timeline-wrapper .playlist a {
+        color: #e1e1e0;
+        padding-left: .5rem; }
+    .page-wrapper .playlist-timeline-wrapper .playlist li {
+      padding: 10px 10px;
+      color: #e1e1e0;
+      border-bottom: 1px solid #494946; }
+      .page-wrapper .playlist-timeline-wrapper .playlist li:hover {
+        background: #2b2b32;
+        cursor: pointer; }
+    .page-wrapper .playlist-timeline-wrapper .audio-timeline-container {
+      position: fixed;
+      bottom: 0;
+      height: 120px;
+      width: 100%;
+      border-top: 1px solid #76949d;
+      vertical-align: middle;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #28282f; }
+      .page-wrapper .playlist-timeline-wrapper .audio-timeline-container .audio-control-buttons {
+        padding: 1rem;
+        font-size: 2rem;
+        text-align: center;
+        vertical-align: middle;
+        color: #c8c8c6; }
+        .page-wrapper .playlist-timeline-wrapper .audio-timeline-container .audio-control-buttons i {
+          padding: 0 1rem;
+          cursor: pointer; }
+      .page-wrapper .playlist-timeline-wrapper .audio-timeline-container #progress-bar {
+        background: #c8c8c6;
+        width: 0%;
+        height: 4px; }
+      .page-wrapper .playlist-timeline-wrapper .audio-timeline-container .timeline {
+        width: 70%;
+        height: 4px;
+        margin-right: 20px;
+        float: left;
+        border-radius: 15px;
+        background: #63635f;
+        vertical-align: middle;
+        cursor: pointer; }
+        .page-wrapper .playlist-timeline-wrapper .audio-timeline-container .timeline .playhead {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          margin-top: 0px;
+          background: #c8c8c6;
+          position: relative;
+          bottom: 10px;
+          right: 1px; }
 
 .vr-project {
   padding: 4rem; }
@@ -745,18 +729,20 @@ main {
         width: 60vw; }
       #video-production #credit-photo-container #video-page-movi-img {
         order: 1; }
-  .main-info-block {
+  .page-wrapper .main-info-block {
     padding: 10rem 5rem 3rem 5rem;
     display: flex; }
-  .album-cover {
-    height: 250px;
-    width: 250px; }
-  .playlist {
+    .page-wrapper .main-info-block .album-cover {
+      height: 250px;
+      width: 250px; }
+  .page-wrapper .playlist-timeline-wrapper .playlist {
     margin-top: 1rem;
-    height: 50%;
+    margin-bottom: 10rem;
     margin-bottom: 5rem; }
-    .playlist li {
+    .page-wrapper .playlist-timeline-wrapper .playlist li {
       padding: 5px; }
+      .page-wrapper .playlist-timeline-wrapper .playlist li .current-song {
+        color: #55d9fa !important; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
@@ -804,7 +790,7 @@ main {
     .vr-project .project-info-container .project-info .project-info-block .project-info-text-container {
       margin-left: 0; }
       .vr-project .project-info-container .project-info .project-info-block .project-info-text-container .project-info-text {
-        text-align: center; }
+        text-align: left; }
     .vr-project .project-info-container .project-info .project-info-block:nth-child(even) .project-info-text-container {
       order: 2; }
   #contact-me {
@@ -858,7 +844,8 @@ main {
       #home-about #home-about-content #home-about-text {
         width: 80vw;
         margin: 0;
-        margin-top: 1rem; }
+        margin-top: 1rem;
+        margin-bottom: 1rem; }
         #home-about #home-about-content #home-about-text p {
           margin: .5rem 0rem;
           padding: 1rem;
@@ -988,43 +975,65 @@ main {
   .menu-btn {
     top: 25px;
     right: 25px; }
-  .main-info-block {
+  .page-wrapper .main-info-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0 0 0; }
-    .main-info-block h1 {
+    padding: 2.5rem 0 0 0; }
+    .page-wrapper .main-info-block .album-cover {
+      height: 200px;
+      width: 200px; }
+    .page-wrapper .main-info-block h1 {
       padding-bottom: 0.5rem;
       font-size: 2rem; }
-    .main-info-block img {
+    .page-wrapper .main-info-block img {
       margin: 0;
       padding-bottom: 1rem; }
-  .album-cover {
-    height: 200px;
-    width: 200px; }
-  .album-info-wrapper {
-    height: 140px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  .project-info {
-    text-align: center;
-    margin: 0; }
-  .playlist {
-    height: 40%;
+    .page-wrapper .main-info-block .album-info-wrapper {
+      height: 140px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .page-wrapper .main-info-block .album-info-wrapper .project-info {
+        text-align: center;
+        margin: 0; }
+  .page-wrapper .playlist-timeline-wrapper .playlist {
+    width: 100%;
     padding: 0;
     margin-bottom: 0; }
-  .audio-timeline-container {
-    width: 90vw;
+    .page-wrapper .playlist-timeline-wrapper .playlist li {
+      padding-left: 2rem; }
+  .page-wrapper .playlist-timeline-wrapper .audio-timeline-container {
+    width: 100%;
     margin-top: 1rem; }
-  .timeline {
-    margin: 0;
-    width: 90%; }
-  .playlist-timeline-wrapper {
-    height: 263px; } }
+    .page-wrapper .playlist-timeline-wrapper .audio-timeline-container .timeline {
+      margin: 0;
+      width: 85%; } }
 
 @media screen and (max-width: 700px) and (orientation: landscape) {
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row; }
+    .menu .menu-nav {
+      width: 50vw;
+      height: 100vh;
+      transform: translate3d(0, 100%, 0);
+      font-size: 24px;
+      padding: 2rem; }
+      .menu .menu-nav li a {
+        padding: .5rem; }
+    .menu .menu-branding {
+      padding-top: 0rem;
+      width: 50vw;
+      height: 100vh;
+      transform: translate3d(0, -100%, 0); }
+      .menu .menu-branding .portrait {
+        background: url("../img/portrait_small.jpg");
+        width: 150px;
+        height: 150px; }
   main#home {
     padding: 3rem;
     display: flex;
