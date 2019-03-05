@@ -185,7 +185,7 @@
     "job2"
     "job3";
   grid-template-columns: 1fr;
-}
+  }
   // about page
   #about {
     h1 {
@@ -261,7 +261,7 @@
           .project-info-text-container {
             margin-left: 0;
             .project-info-text {
-              text-align: center;
+              text-align: left;
             }
           }
           &:nth-child(even){
@@ -345,6 +345,7 @@
         width: 80vw;
         margin: 0;
         margin-top: 1rem;
+        margin-bottom: 1rem;
         p {
           margin:.5rem 0rem;
           padding: 1rem;
@@ -620,6 +621,39 @@
 
 // Landscape Smartphones
 @include mediaMobileLandscape {
+  // menu
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    .menu-nav {
+      width: 50vw;
+      height: 100vh;
+      transform: translate3d(0, 100%, 0);
+      font-size: 24px;
+      padding: 2rem;
+      li{
+        a {
+          padding: .5rem;
+        }
+      }
+    }
+  
+    .menu-branding {
+      // top: 25vh;
+      padding-top:0rem;
+      width: 50vw;
+      height: 100vh;
+      transform: translate3d(0, -100%, 0);
+  
+      .portrait {
+        background: url("../img/portrait_small.jpg");
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
    // home main
    main#home {
     padding: 3rem;

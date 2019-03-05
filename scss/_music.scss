@@ -1,149 +1,144 @@
 .page-wrapper {
-  height: 100vh;
-  width: 100vw;
-}
-// header {
-//   position: relative;
-//   background: rgba(0,0,0,0);
-//   padding-top: 1rem;
-//   padding-left: 3rem;
-//   h1 {
-//     padding-bottom: 1rem;
-//     font-size: 2rem;
-//   }
-//   span {
-//     font-size: 1.5rem;
-//   }
-// }
-.main-info-block {
-  background: linear-gradient(lighten($primary-color, 10), $primary-color);
-  // position: fixed;
-  margin: 0;
-  padding-top: 5rem;
-  padding-left: 8rem;
- 
-  h1 {
-    padding-bottom: 1rem;
-    font-size: 2rem;
+  // height: 100vh;
+  // width: 100vw;
+
+  .main-info-block {
+    background: linear-gradient(lighten($primary-color, 10), $primary-color);
+    // position: fixed;
+    margin: 0;
+    padding-top: 5rem;
+    padding-left: 8rem;
+    height: 50%;
+    img {
+      margin-left: 5rem;
+    }
+    .album-cover {
+      height: 400px;
+      width: 400px;
+    }
+    .album-info-wrapper {
+      margin-left: 3rem;
+      margin-right: 0;
+      display: inline-block;
+      width: 250px;
+      height: 200px;
+      // overflow: hidden;
+      h1 {
+        padding-bottom: 1rem;
+        font-size: 2rem;
+      }
+      p {
+        // overflow: hidden;
+      }
+    }
   }
-  img {
-    margin-left: 5rem;
+  .playlist-timeline-wrapper {
+    margin: 0rem;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column; 
+    .playlist{
+      list-style: none;
+      width: 70%;
+      // height: 100%;
+      // overflow: auto;
+      margin-top: 3rem;
+      border: 1px solid #333;
+      border-radius:5px;
+      margin-bottom: 150px;
+      padding: 0;
+    
+      a {
+        color: $light-text-color;
+        padding-left: .5rem;
+      }
+    }
+    .playlist li{
+      padding: 10px 10px;
+      color: $light-text-color;
+      border-bottom: 1px solid darken($light-text-color, 70);
+      &:hover {
+        background: lighten($primary-color, 4);
+        cursor: pointer;
+      }
+      .current-song {
+        // background: lighten($primary-color, 4);
+        color: rgb(85, 217, 250) !important;
+        // color: #f00 !important;
+      }
+    }
+    .audio-timeline-container {
+      position: fixed;
+      bottom: 0;
+      height:120px;
+      width: 100%;
+      border-top: 1px solid $secondary-color;
+      // background: #eee;
+      vertical-align: middle; 
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // border: 1px solid #333;
+      // border-radius: 5px;
+      background: lighten($primary-color, 4);
+      .audio-control-buttons{
+        padding: 1rem;
+        // float:left;
+        font-size: 2rem;
+        text-align: center;
+        vertical-align: middle;
+        
+        color: darken($light-text-color, 10);
+        i {
+          padding: 0 1rem;
+          cursor: pointer;
+        }
+      }
+      #progress-bar {
+        background: darken($light-text-color, 10);
+        width: 0%;
+        height: 4px;
+      }
+      .timeline {
+        width: 70%;
+        height: 4px;
+        margin-right:20px;
+        float: left;
+        border-radius: 15px;
+        background: darken($light-text-color, 50);
+        vertical-align: middle;
+        cursor: pointer;
+        .playhead{
+          // visibility: hidden;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          margin-top: 0px;
+          background: darken($light-text-color, 10);
+          position: relative;
+          bottom: 10px;
+          right: 1px;
+        }
+      }
+    }
   }
-}
-
-.album-cover {
-  height: 400px;
-  width: 400px;
-}
-.album-info-wrapper {
-  margin-left: 3rem;
-  margin-right: 0;
-  display: inline-block;
-  width: 250px;
-  height: 200px;
-  overflow: hidden;
-  p {
-    overflow: hidden;
-  }
-}
-
-.playlist-timeline-wrapper {
-  margin: 0rem;
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  // justify-content: center;
-  flex-direction: column; 
-}
-
-.playlist{
-  list-style: none;
-  width: 70%;
-  height: 45%;
-  overflow: auto;
-  margin-top: 3rem;
-  border: 1px solid #333;
-  border-radius:5px;
-  margin-bottom: 2rem;
-  padding: 0;
-
-  a {
-    color: $light-text-color;
-    padding-left: .5rem;
-  }
-}
-.playlist li{
-  padding: 10px 10px;
-  color: $light-text-color;
-  border-bottom: 1px solid darken($light-text-color, 70);
-  &:hover {
-    background: lighten($primary-color, 4);
-    cursor: pointer;
-  }
-}
-
-.current-song {
-  // background: lighten($primary-color, 4);
-  color: rgb(85, 217, 250) !important;
-  // color: #f00 !important;
-}
-
-.audio-timeline-container {
-  height:100px;
-  width: 60%;
-  // background: #eee;
-  vertical-align: middle; 
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background: lighten($primary-color, 4);
- 
-}
-.audio-control-buttons{
-  padding: 1rem;
-  // float:left;
-  font-size: 2rem;
-  text-align: center;
-  vertical-align: middle;
   
-  color: darken($light-text-color, 10);
-  i {
-    padding: 0 1rem;
-    cursor: pointer;
-  }
+  
+  
+  
+  
  
-}
+  
+  /* .play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;} */
+  /* .pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;} */
+ 
+  
+  
+  
+  
 
-/* .play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;} */
-/* .pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;} */
-.timeline {
-	width: 70%;
-	height: 4px;
-  margin-right:20px;
-	float: left;
-	border-radius: 15px;
-  background: darken($light-text-color, 50);
-  vertical-align: middle;
-  cursor: pointer;
-}
-.playhead{
-  // visibility: hidden;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	margin-top: 0px;
-  background: darken($light-text-color, 10);
-  position: relative;
-  bottom: 10px;
-  right: 1px;
-}
-
-#progress-bar {
-  background: darken($light-text-color, 10);
-  width: 0%;
-  height: 4px;
 }
