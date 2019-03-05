@@ -472,11 +472,13 @@ main {
       margin-left: 3rem;
       margin-right: 0;
       display: inline-block;
-      width: 250px;
+      width: 80%;
       height: 200px; }
       .page-wrapper .main-info-block .album-info-wrapper h1 {
-        padding-bottom: 1rem;
+        padding-bottom: 0rem;
         font-size: 2rem; }
+      .page-wrapper .main-info-block .album-info-wrapper .project-info {
+        width: 100%; }
   .page-wrapper .playlist-timeline-wrapper {
     margin: 0rem;
     width: 100%;
