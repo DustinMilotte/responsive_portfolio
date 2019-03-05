@@ -158,24 +158,36 @@
   }
 
   // music project page
-  .main-info-block {
-    padding: 10rem 5rem 3rem 5rem;
-
-    display: flex;
-  }
-  .album-cover {
-    height: 250px;
-    width: 250px;
-  }
-  .playlist {
-    margin-top: 1rem;
-    li {
-      padding: 5px;
+  .page-wrapper {
+    .main-info-block {
+      padding: 10rem 5rem 3rem 5rem;
+  
+      display: flex;
+      .album-cover {
+        height: 250px;
+        width: 250px;
+      }
     }
-    height: 50%;
-    margin-bottom: 5rem;
+    .playlist-timeline-wrapper{
+      .playlist {
+        margin-top: 1rem;
+        margin-bottom: 10rem;
+        li {
+          padding: 5px;
+          .current-song {
+            // background: lighten($primary-color, 4);
+            color: rgb(85, 217, 250) !important;
+            // color: #f00 !important;
+          }
+        }
+        // height: 50%;
+        margin-bottom: 5rem;
+      }
+    }
+   
+  
   }
-
+  
  // about page
  .about-info {
   grid-template-areas:
@@ -559,64 +571,74 @@
   }
   
 
-  // music project page
   .menu-btn {
     top: 25px;
     right: 25px;
   }
 
-  .main-info-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem 0 0 0;
-    h1 {
-      padding-bottom: 0.5rem;
-      font-size: 2rem;
+  // music project page
+  .page-wrapper {
+    .main-info-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 0 0 0;
+      .album-cover {
+        height: 200px;
+        width: 200px;
+      }
+      h1 {
+        padding-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+      img {
+        margin: 0;
+        padding-bottom: 1rem;
+      }
+      .album-info-wrapper {
+        height: 140px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .project-info {
+          text-align: center;
+          margin: 0;
+        }
+      }
     }
-    img {
-      margin: 0;
-      padding-bottom: 1rem;
+    .playlist-timeline-wrapper{
+      .playlist {
+        // height: 40%;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+        li {
+          padding-left: 2rem;
+        }
+      }
+    
+      .audio-timeline-container {
+        width: 100%;
+        margin-top: 1rem;
+        .timeline {
+          margin: 0;
+          width: 85%;
+        }
+      }
+    
+     
     }
+  
+   
+  
+   
+  
+   
+  
+   
   }
-
-  .album-cover {
-    height: 200px;
-    width: 200px;
-  }
-
-  .album-info-wrapper {
-    height: 140px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-info {
-    text-align: center;
-    margin: 0;
-  }
-
-  .playlist {
-    height: 40%;
-    padding: 0;
-    margin-bottom: 0;
-  }
-
-  .audio-timeline-container {
-    width: 90vw;
-    margin-top: 1rem;
-  }
-
-  .timeline {
-    margin: 0;
-    width: 90%;
-  }
-
-  .playlist-timeline-wrapper {
-    height: 263px;
-  }
+ 
 }
 
 // Landscape Smartphones

@@ -46,11 +46,19 @@
       // height: 100%;
       // overflow: auto;
       margin-top: 3rem;
-      border: 1px solid #333;
-      border-radius:5px;
+      border-top: 1px solid darken($light-text-color, 60);
+      // border: 1px solid red;
+      // border-radius:5px;
       margin-bottom: 150px;
       padding: 0;
-    
+      .current-song {
+        background: lighten($primary-color, 12);
+        // color: #f00 !important;
+      }
+      .current-song-text {
+        color: rgb(85, 217, 250) !important;
+
+      }
       a {
         color: $light-text-color;
         padding-left: .5rem;
@@ -59,16 +67,12 @@
     .playlist li{
       padding: 10px 10px;
       color: $light-text-color;
-      border-bottom: 1px solid darken($light-text-color, 70);
+      border-bottom: 1px solid darken($light-text-color, 60);
       &:hover {
-        background: lighten($primary-color, 4);
+        background: lighten($primary-color, 5);
         cursor: pointer;
       }
-      .current-song {
-        // background: lighten($primary-color, 4);
-        color: rgb(85, 217, 250) !important;
-        // color: #f00 !important;
-      }
+      
     }
     .audio-timeline-container {
       position: fixed;

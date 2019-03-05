@@ -488,22 +488,23 @@ main {
       list-style: none;
       width: 70%;
       margin-top: 3rem;
-      border: 1px solid #333;
-      border-radius: 5px;
+      border-top: 1px solid #494946;
       margin-bottom: 150px;
       padding: 0; }
+      .page-wrapper .playlist-timeline-wrapper .playlist .current-song {
+        background: #3b3b45; }
+      .page-wrapper .playlist-timeline-wrapper .playlist .current-song-text {
+        color: #55d9fa !important; }
       .page-wrapper .playlist-timeline-wrapper .playlist a {
         color: #e1e1e0;
         padding-left: .5rem; }
     .page-wrapper .playlist-timeline-wrapper .playlist li {
       padding: 10px 10px;
       color: #e1e1e0;
-      border-bottom: 1px solid #2f2f2d; }
+      border-bottom: 1px solid #494946; }
       .page-wrapper .playlist-timeline-wrapper .playlist li:hover {
-        background: #28282f;
+        background: #2b2b32;
         cursor: pointer; }
-      .page-wrapper .playlist-timeline-wrapper .playlist li .current-song {
-        color: #55d9fa !important; }
     .page-wrapper .playlist-timeline-wrapper .audio-timeline-container {
       position: fixed;
       bottom: 0;
@@ -728,18 +729,20 @@ main {
         width: 60vw; }
       #video-production #credit-photo-container #video-page-movi-img {
         order: 1; }
-  .main-info-block {
+  .page-wrapper .main-info-block {
     padding: 10rem 5rem 3rem 5rem;
     display: flex; }
-  .album-cover {
-    height: 250px;
-    width: 250px; }
-  .playlist {
+    .page-wrapper .main-info-block .album-cover {
+      height: 250px;
+      width: 250px; }
+  .page-wrapper .playlist-timeline-wrapper .playlist {
     margin-top: 1rem;
-    height: 50%;
+    margin-bottom: 10rem;
     margin-bottom: 5rem; }
-    .playlist li {
+    .page-wrapper .playlist-timeline-wrapper .playlist li {
       padding: 5px; }
+      .page-wrapper .playlist-timeline-wrapper .playlist li .current-song {
+        color: #55d9fa !important; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
@@ -972,41 +975,41 @@ main {
   .menu-btn {
     top: 25px;
     right: 25px; }
-  .main-info-block {
+  .page-wrapper .main-info-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0 0 0; }
-    .main-info-block h1 {
+    padding: 2.5rem 0 0 0; }
+    .page-wrapper .main-info-block .album-cover {
+      height: 200px;
+      width: 200px; }
+    .page-wrapper .main-info-block h1 {
       padding-bottom: 0.5rem;
       font-size: 2rem; }
-    .main-info-block img {
+    .page-wrapper .main-info-block img {
       margin: 0;
       padding-bottom: 1rem; }
-  .album-cover {
-    height: 200px;
-    width: 200px; }
-  .album-info-wrapper {
-    height: 140px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  .project-info {
-    text-align: center;
-    margin: 0; }
-  .playlist {
-    height: 40%;
+    .page-wrapper .main-info-block .album-info-wrapper {
+      height: 140px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .page-wrapper .main-info-block .album-info-wrapper .project-info {
+        text-align: center;
+        margin: 0; }
+  .page-wrapper .playlist-timeline-wrapper .playlist {
+    width: 100%;
     padding: 0;
     margin-bottom: 0; }
-  .audio-timeline-container {
-    width: 90vw;
+    .page-wrapper .playlist-timeline-wrapper .playlist li {
+      padding-left: 2rem; }
+  .page-wrapper .playlist-timeline-wrapper .audio-timeline-container {
+    width: 100%;
     margin-top: 1rem; }
-  .timeline {
-    margin: 0;
-    width: 90%; }
-  .playlist-timeline-wrapper {
-    height: 263px; } }
+    .page-wrapper .playlist-timeline-wrapper .audio-timeline-container .timeline {
+      margin: 0;
+      width: 85%; } }
 
 @media screen and (max-width: 700px) and (orientation: landscape) {
   .menu {
