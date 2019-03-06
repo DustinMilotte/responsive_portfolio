@@ -167,6 +167,9 @@
         height: 250px;
         width: 250px;
       }
+      .album-info-wrapper {
+        margin-left: 3rem;
+      }
     }
     .playlist-timeline-wrapper{
       .playlist {
@@ -462,6 +465,9 @@
           }
         }
       }
+      #video-page-movi-img {
+        width: 80%;
+      }
     }
   }
 
@@ -598,6 +604,8 @@
       .album-info-wrapper {
         height: 140px;
         margin: 0;
+        margin-left: 0;
+        width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
