@@ -264,7 +264,8 @@ main {
   #home-work .glider-wrap {
     padding: 0 0rem; }
   #home-work .glider {
-    margin: 2rem; }
+    margin: 2rem;
+    overflow: hidden; }
   #home-work .glider-prev {
     height: 100px;
     width: 100px;
@@ -590,8 +591,7 @@ main {
             font-size: 1.3rem;
             max-width: 700px;
             min-width: 300px;
-            height: auto;
-            overflow: scroll; }
+            height: auto; }
           .vr-project .project-info-container .project-info .project-info-block .project-info-text-container a {
             color: #55d9fa; }
 
