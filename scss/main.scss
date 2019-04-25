@@ -13,7 +13,6 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  
 }
 
 // headings
@@ -271,6 +270,11 @@ main {
     // margin: 1rem;
     padding: 1rem;
     border: 1px solid $secondary-color;
+    &:hover {
+        // opacity: 0.6;
+        border-color: white;
+        @include easeOut;
+      }
     // color: $primary-color;
     background: darken($primary-color, 5);
     span{

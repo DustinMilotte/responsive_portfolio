@@ -280,6 +280,9 @@ main {
     padding: 1rem;
     border: 1px solid #76949d;
     background: #131316; }
+    #home-work .home-project-container:hover {
+      border-color: white;
+      transition: all 0.3s ease-out; }
     #home-work .home-project-container span {
       font-size: 1.25rem;
       padding-bottom: 10px;
@@ -820,7 +823,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-weight: 100; }
+    font-weight: 200; }
     main#home h1 {
       margin-top: 10rem;
       font-size: 4rem;
@@ -1013,6 +1016,9 @@ main {
     margin-bottom: 0; }
     .page-wrapper .playlist-timeline-wrapper .playlist li {
       padding-left: 2rem; }
+      .page-wrapper .playlist-timeline-wrapper .playlist li:hover {
+        background: #1f1f24;
+        cursor: pointer; }
   .page-wrapper .playlist-timeline-wrapper .audio-timeline-container {
     width: 100%;
     margin-top: 1rem; }
