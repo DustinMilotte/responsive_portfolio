@@ -1,196 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous"
+        />
+        <link href="css/glider.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon-16x16.png"
+        />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
-  <link href="css/glider.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">  
- 
-  <script src="js/moveTo.min.js"></script>
-  <title>Dustin Milotte</title>
-</head>
+        <script src="js/moveTo.min.js"></script>
+        <title>Dustin Milotte</title>
+    </head>
 
-<body id="bg-img">
-  <header>
-    <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-    </div>
-
-    <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait"></div>
-      </div>
-      <ul class="menu-nav">
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link">Work</a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="background-image rellax" data-rellax-speed="-9"></div>
-  <div id="beyond-top"></div>
-  <main id="home" class="rellax" data-rellax-speed="0">
-      <h1 class="lg-heading">
-          Dustin
-        <span class="text-secondary">Milotte</span>
-      </h1>
-      <h2 id="home-main-sm-heading" class="sm-heading">
-        VR Developer, Musician,<br class="mobile-line-break"> 2nd Cam / AC
-      </h2>
-      <div class="icons">
-        <a href="https://github.com/DustinMilotte"><i class="fab fa-github fa-2x"></i></a>
-        <a href="https://www.linkedin.com/in/dustin-milotte/"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="https://www.instagram.com/djmilotte/"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://twitter.com/vea_arthur"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://www.imdb.com/name/nm7018123/"><i class="fab fa-imdb fa-2x"></i></a>
-      </div>
-  </main>                                 
-  <div id="nav-down">
-    <div id="nav-down-container">
-      <i id="nav-down-btn" class="fas fa-chevron-circle-down"></i>
-    </div>
-  </div>
-
-  <section id="home-about">
-    <h2 id= "about-section-title" class="home-section-title">-- About --</h2>
-    <div id="home-about-content">
-      <div id="home-about-text"><p>Hey! How's it going? Thanks for stopping by. A little about myself? I started out working in music as a performer, teacher, and producer. And then I spent 5 years in video production, mostly television, as a camera operator and 2nd Unit Director. I am currently living in the NYC area working on VR applications and WebXR sites. More <a href="about.html">here.</a></p>
-      </div>
-      <div id="home-about-img-wrapper">
-        <img id="home-about-img" src="img/home-photos/portfolio-home-about.jpg" alt="about Dustin home">
-      </div>
-    </div>
-  </section>
-  
-  <section id="home-work">
-    <h2 id="home-section-title-work"class="home-section-title">-- Work -- </h2>
-    <div class="glider-wrap">
-      <div class="glider-contain">
-        <button class="glider-prev">
-          <i class="fa fa-chevron-left"></i>
-        </button>
-
-        <div class="glider">
-            <figure>
-                <a href="dream-keeper.html">
-                <div class="home-project-container">
-                  <span>Dream Keeper &nbsp <i class="fas fa-vr-cardboard"></i></span>
-                  <img src="img/dream-keeper-photos/dream-keeper-wide.jpg" alt="Dream Keeper">
-                </div>
-              </a>
-              </figure>
-          <figure>
-              <a href="video-production.html">
-              <div class="home-project-container">
-                <span>Video Production &nbsp <i class="fas fa-video"></i></span>
-                <img src="img/projects/dustin-camera-bnw-737-737.jpg" alt="Video Production">
-              </div>
-            </a>
-            </figure>
-          <figure>
-            <a href="artvandalay.html">
-            <div class="home-project-container">
-              <span>artvandalay &nbsp <i class="fas fa-music"></i></span>
-              <img src="img/projects/artvandalay-cover-large.jpg" alt="artvandalay">
+    <body id="bg-img">
+        <header>
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
             </div>
-          </a>
-          </figure>
-          <figure>
-            <a href="deep-green.html">
-              <div class="home-project-container">
-                <span>Deep Green &nbsp <i class="fa fa-music"></i></span>
-                <img src="img/projects/deep-green-cover.jpg" alt="Deep Green">
-              </div>
-            </a>
-          </figure>
-          <figure>
-            <a href="star-mountain.html">
-              <div class="home-project-container">
-                <span>Star Mountain &nbsp <i class="fas fa-music"></i></span>
-                <img src="img/projects/star-mountain-cover.jpg" alt="Star Mountain">
-              </div>
-            </a>
-          </figure>
-          <!-- <figure>
-            <a href="hypenkrunk.html">
-              <div class="home-project-container">
-                <span>Hypenkr&uumlnk &nbsp <i class="fa fa-music"></i></span>
-                <img src="img/projects/hypenkrunk-cover.jpg" alt="Hypenkrunk">
-              </div>
-            </a>
-          </figure> -->
-        </div>
-    
-        <button class="glider-next">
-          <i class="fa fa-chevron-right"></i>
-        </button>
-        <div id="dots-container">
-          <div id=dots class="glider-dots"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="home-contact">
-    <h2 class="home-section-title">-- Contact --</h2>
-    <div class="boxes">
-      <div>
-        <a href="mailto: dmilotte@gmail.com?"><span class="text-secondary">
-          Email:
-        </span> dmilotte@gmail.com </a>
-      </div>
-      <div>
-        <a href="tel:18654067102">
-          <span class="text-secondary">
-            Phone:
-          </span>
-          (865) 406-7102
-          </a>
-      </div>
-      <div class="icons-contact">
-        <a href="https://github.com/DustinMilotte"><i class="fab fa-github fa-2x"></i></a>
-        <a href="https://www.linkedin.com/in/dustin-milotte/"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="https://www.instagram.com/djmilotte/"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://twitter.com/vea_arthur"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://www.imdb.com/name/nm7018123/"><i class="fab fa-imdb fa-2x"></i></a>
+            <nav class="menu">
+                <div class="menu-branding">
+                    <div class="portrait"></div>
+                </div>
+                <ul class="menu-nav">
+                    <li class="nav-item current">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="work.html" class="nav-link">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="background-image rellax" data-rellax-speed="-9"></div>
+        <div id="beyond-top"></div>
+        <main id="home" class="rellax" data-rellax-speed="0">
+            <h1 class="lg-heading">
+                Dustin
+                <span class="text-secondary">Milotte</span>
+            </h1>
+            <h2 id="home-main-sm-heading" class="sm-heading">
+                VR Developer, Musician,<br class="mobile-line-break" />
+                2nd Cam / AC
+            </h2>
+            <div class="icons">
+                <a href="https://github.com/DustinMilotte"
+                    ><i class="fab fa-github fa-2x"></i
+                ></a>
+                <a href="https://www.instagram.com/djmilotte/"
+                    ><i class="fab fa-instagram fa-2x"></i
+                ></a>
+                <a href="https://twitter.com/vea_arthur"
+                    ><i class="fab fa-twitter fa-2x"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/dustin-milotte/"
+                    ><i class="fab fa-linkedin fa-2x"></i
+                ></a>
+                <a href="https://www.imdb.com/name/nm7018123/"
+                    ><i class="fab fa-imdb fa-2x"></i
+                ></a>
+            </div>
+        </main>
+        <div id="nav-down">
+            <div id="nav-down-container">
+                <i id="nav-down-btn" class="fas fa-chevron-circle-down"></i>
+            </div>
         </div>
-    </div>
-  </section>
-  <footer id="main-footer">
-    Dustin Milotte || Copyright &copy; 2019
-  </footer>
-  <script src="js/glider.min.js"></script>
 
-  <script src="js/main.js"></script>
-  <script type="text/javascript" src="js/rellax.min.js"></script>
-    <script>
-    	var rellax = new Rellax('.rellax', {
-        // center: true
-        callback: function(position) {
-            // callback every position change
-            // console.log(position);
-        }
-      });
-    </script>
-    
-</body>
+        <section id="home-about">
+            <h2 id="about-section-title" class="home-section-title">
+                -- About --
+            </h2>
+            <div id="home-about-content">
+                <div id="home-about-text">
+                    <p>
+                        Hey! How's it going? Thanks for stopping by. A little
+                        about myself? I started out working in music as a
+                        performer, teacher, and producer. And then I spent 5
+                        years in video production, mostly television, as a
+                        camera operator and 2nd Unit Director. I am currently
+                        living in the NYC area working on VR applications and
+                        WebXR sites. More <a href="about.html">here.</a>
+                    </p>
+                </div>
+                <div id="home-about-img-wrapper">
+                    <img
+                        id="home-about-img"
+                        src="img/home-photos/portfolio-home-about.jpg"
+                        alt="about Dustin home"
+                    />
+                </div>
+            </div>
+        </section>
 
+        <section id="home-work">
+            <h2 id="home-section-title-work" class="home-section-title">
+                -- Work --
+            </h2>
+            <div class="glider-wrap">
+                <div class="glider-contain">
+                    <button class="glider-prev">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+
+                    <div class="glider">
+                        <figure>
+                            <a href="tone-quest.html">
+                                <div class="home-project-container">
+                                    <span
+                                        >Tone Quest &nbsp
+                                        <i class="fas fa-vr-cardboard"></i
+                                    ></span>
+                                    <img
+                                        src="img/tone-quest-photos/tone-quest1.jpg"
+                                        alt="Dream Keeper"
+                                    />
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="video-production.html">
+                                <div class="home-project-container">
+                                    <span
+                                        >Video Production &nbsp
+                                        <i class="fas fa-video"></i
+                                    ></span>
+                                    <img
+                                        src="img/projects/dustin-camera-bnw-737-737.jpg"
+                                        alt="Video Production"
+                                    />
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="artvandalay.html">
+                                <div class="home-project-container">
+                                    <span
+                                        >artvandalay &nbsp
+                                        <i class="fas fa-music"></i
+                                    ></span>
+                                    <img
+                                        src="img/projects/artvandalay-cover-large.jpg"
+                                        alt="artvandalay"
+                                    />
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="dream-keeper.html">
+                                <div class="home-project-container">
+                                    <span
+                                        >Dream Keeper &nbsp
+                                        <i class="fas fa-vr-cardboard"></i
+                                    ></span>
+                                    <img
+                                        src="img/dream-keeper-photos/dream-keeper-wide.jpg"
+                                        alt="Dream Keeper"
+                                    />
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="deep-green.html">
+                                <div class="home-project-container">
+                                    <span
+                                        >Deep Green &nbsp
+                                        <i class="fa fa-music"></i
+                                    ></span>
+                                    <img
+                                        src="img/projects/deep-green-cover.jpg"
+                                        alt="Deep Green"
+                                    />
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="star-mountain.html">
+                                <div class="home-project-container">
+                                    <span
+                                        >Star Mountain &nbsp
+                                        <i class="fas fa-music"></i
+                                    ></span>
+                                    <img
+                                        src="img/projects/star-mountain-cover.jpg"
+                                        alt="Star Mountain"
+                                    />
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="hypenkrunk.html">
+                                <div class="home-project-container">
+                                    <span
+                                        >Hypenkr&uumlnk &nbsp
+                                        <i class="fa fa-music"></i
+                                    ></span>
+                                    <img
+                                        src="img/projects/hypenkrunk-cover.jpg"
+                                        alt="Hypenkrunk"
+                                    />
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <button class="glider-next">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                    <div id="dots-container">
+                        <div id="dots" class="glider-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="home-contact">
+            <h2 class="home-section-title">-- Contact --</h2>
+            <div class="boxes">
+                <div>
+                    <a href="mailto: dmilotte@gmail.com?"
+                        ><span class="text-secondary">
+                            Email:
+                        </span>
+                        dmilotte@gmail.com
+                    </a>
+                </div>
+                <div>
+                    <a href="tel:18654067102">
+                        <span class="text-secondary">
+                            Phone:
+                        </span>
+                        (865) 406-7102
+                    </a>
+                </div>
+                <div class="icons-contact">
+                    <a href="https://github.com/DustinMilotte"
+                        ><i class="fab fa-github fa-2x"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/in/dustin-milotte/"
+                        ><i class="fab fa-linkedin fa-2x"></i
+                    ></a>
+                    <a href="https://www.instagram.com/djmilotte/"
+                        ><i class="fab fa-instagram fa-2x"></i
+                    ></a>
+                    <a href="https://twitter.com/vea_arthur"
+                        ><i class="fab fa-twitter fa-2x"></i
+                    ></a>
+                    <a href="https://www.imdb.com/name/nm7018123/"
+                        ><i class="fab fa-imdb fa-2x"></i
+                    ></a>
+                </div>
+            </div>
+        </section>
+        <footer id="main-footer">
+            Dustin Milotte || Copyright &copy; 2019
+        </footer>
+        <script src="js/glider.min.js"></script>
+
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/rellax.min.js"></script>
+        <script>
+            var rellax = new Rellax(".rellax", {
+                // center: true
+                callback: function(position) {
+                    // callback every position change
+                    // console.log(position);
+                }
+            });
+        </script>
+    </body>
 </html>
