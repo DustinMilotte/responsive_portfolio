@@ -265,7 +265,7 @@ main {
     padding: 0 0rem; }
   #home-work .glider {
     margin: 2rem;
-    overflow: hidden; }
+    scrollbar-width: none; }
   #home-work .glider-prev {
     height: 100px;
     width: 100px;

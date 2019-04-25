@@ -244,7 +244,8 @@ main {
   }
   .glider {
     margin: 2rem;
-    overflow: hidden;
+    // overflow: hidden;
+    scrollbar-width: none;
   }
 
   .glider-prev {
