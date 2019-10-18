@@ -325,6 +325,12 @@ main {
   padding: 4rem 6rem; }
   #about h2 {
     background: rgba(0, 0, 0, 0); }
+    #about a{
+      color: #55d9fa;
+    }
+    #about a:hover{
+      text-decoration: underline;
+    }
   #about .bio {
     display: grid;
     grid-gap: 30px;
@@ -353,10 +359,6 @@ main {
     #about .bio .bio-img-camera {
       height: 420px;
       width: 329px; }
-    #about .bio .imdb-link {
-      color: #55d9fa; }
-    #about .bio .imdb-link:hover {
-      text-decoration: underline; }
 
 #my-work {
   padding: 4rem; }
@@ -752,7 +754,11 @@ main {
       .page-wrapper .playlist-timeline-wrapper .playlist li .current-song {
         color: #55d9fa !important; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage"
+ "bio"
+ "job1"
+ "job2"
+ "job3";
     grid-template-columns: 1fr; }
   #about h1 {
     font-size: 4rem;
