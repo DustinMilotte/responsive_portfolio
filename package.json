@@ -11,9 +11,9 @@
   "author": "Dustin Milotte",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^2.0.1",
-    "moveto": "^1.8.0",
-    "node-sass": "^4.11.0",
-    "rellax": "^1.7.2"
+    "gh-pages": "^2.1.1",
+    "moveto": "^1.8.2",
+    "node-sass": "^4.12.0",
+    "rellax": "^1.10.0"
   }
 }
