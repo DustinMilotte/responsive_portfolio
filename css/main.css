@@ -133,6 +133,24 @@ header {
 .text-secondary {
   color: #76949d; }
 
+.resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  background: #76949d; }
+
+.resume-button-container {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center; }
+
 #nav-down {
   transition: all 0.3s ease-out;
   position: fixed;
@@ -325,12 +343,6 @@ main {
   padding: 4rem 6rem; }
   #about h2 {
     background: rgba(0, 0, 0, 0); }
-    #about a{
-      color: #55d9fa;
-    }
-    #about a:hover{
-      text-decoration: underline;
-    }
   #about .bio {
     display: grid;
     grid-gap: 30px;
@@ -359,6 +371,10 @@ main {
     #about .bio .bio-img-camera {
       height: 420px;
       width: 329px; }
+    #about .bio .imdb-link {
+      color: #55d9fa; }
+    #about .bio .imdb-link:hover {
+      text-decoration: underline; }
 
 #my-work {
   padding: 4rem; }
@@ -754,11 +770,7 @@ main {
       .page-wrapper .playlist-timeline-wrapper .playlist li .current-song {
         color: #55d9fa !important; }
   .about-info {
-    grid-template-areas: "bioimage"
- "bio"
- "job1"
- "job2"
- "job3";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   #about h1 {
     font-size: 4rem;
@@ -846,8 +858,8 @@ main {
     justify-content: flex-start;
     align-items: center; }
     #home-about h2 {
-      padding-top: 2rem;
-      padding-bottom: 0.5rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
       font-weight: 100; }
     #home-about #home-about-content {
       flex-direction: column;
