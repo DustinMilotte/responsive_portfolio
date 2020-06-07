@@ -284,6 +284,22 @@
               order: 2;
             }
           }
+          .video-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          }
+          video {
+            // max-width: 60vw;
+            // display: inline;
+            display: absolute;
+            width: 100%;
+          }
+          .project-info-img{
+            display: flex;
+            justify-content: center;
+          }
         }
       }
     }
@@ -539,6 +555,12 @@
             img {
               min-width: 100%;
               margin-bottom: 1rem;
+            }
+            #intro-to-unity-img{
+              width: 70%;
+            }
+            video{
+              width: 100%;
             }
           }
           .project-info-text-container {

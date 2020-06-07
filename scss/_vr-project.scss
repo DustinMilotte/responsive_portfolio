@@ -1,4 +1,5 @@
 .vr-project {
+  // max-width: 80%;
   padding: 4rem;
   h2 {
     background: rgba(0, 0, 0, 0);
@@ -27,10 +28,14 @@
           // height: 50vh;
           img {
             display: block;
-            max-width: 100%;
-            min-width: 400px;
+            // max-width: 100%;
+            // min-width: 400px;
             // max-height: 30vh;
             border: $secondary-color 3px solid;
+            // border: 5px solid red;
+          }
+          video {
+            max-width: 800px ;
           }  
         }
         .project-info-text-container {
