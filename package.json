@@ -11,9 +11,17 @@
   "author": "Dustin Milotte",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "moveto": "^1.8.2",
     "node-sass": "^4.14.1",
     "rellax": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DustinMilotte/responsive_portfolio.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DustinMilotte/responsive_portfolio/issues"
   }
 }
