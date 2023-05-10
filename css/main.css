@@ -371,6 +371,9 @@ main {
     #about .bio .bio-img-camera {
       height: 420px;
       width: 329px; }
+    #about .bio .bio-img-logo {
+      height: 300px;
+      width: 500px; }
     #about .bio .imdb-link {
       color: #55d9fa; }
     #about .bio .imdb-link:hover {
@@ -770,7 +773,11 @@ main {
       .page-wrapper .playlist-timeline-wrapper .playlist li .current-song {
         color: #55d9fa !important; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage"
+ "bio"
+ "job1"
+ "job2"
+ "job3";
     grid-template-columns: 1fr; }
   #about h1 {
     font-size: 4rem;
